@@ -28,7 +28,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Generate directory listing
-        uses: jayanta525/github-pages-directory-listing@v3
+        uses: jayanta525/github-pages-directory-listing@v4.0.0
         with:
           FOLDER: '.'   # or your published folder if different
 
