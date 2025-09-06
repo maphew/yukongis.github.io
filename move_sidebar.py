@@ -39,13 +39,13 @@ console = Console()
 def move_sidebar_after_content(html_content: str) -> str:
     """
     Parse HTML and move sidebar section to immediately follow content section.
-    Also removes aside tags with duplicate IDs within the sidebar section.
+    Also removes aside tags with duplicate IDs and specific unwanted asides within the sidebar section.
 
     Args:
         html_content: Raw HTML content as string
 
     Returns:
-        Modified HTML content with sidebar moved after content and duplicate ID asides removed
+        Modified HTML content with sidebar moved after content, duplicate ID asides removed, and specific asides removed
 
     Raises:
         ValueError: If required sections are not found
@@ -62,14 +62,20 @@ def move_sidebar_after_content(html_content: str) -> str:
     if not sidebar_section:
         raise ValueError("Section with id 'sidebar' not found in HTML")
 
-    # Remove aside tags with duplicate IDs within sidebar
+    # Remove specific unwanted aside tags and duplicate IDs within sidebar
+    unwanted_ids = {'search-2', 'meta-2'}
     aside_tags = sidebar_section.find_all('aside', id=True)
     seen_ids = set()
     duplicates_removed = 0
+    unwanted_removed = 0
 
     for aside in aside_tags:
         aside_id = aside.get('id')
-        if aside_id in seen_ids:
+        if aside_id in unwanted_ids:
+            # This is an unwanted aside, remove it
+            aside.decompose()
+            unwanted_removed += 1
+        elif aside_id in seen_ids:
             # This is a duplicate ID, remove it
             aside.decompose()
             duplicates_removed += 1
@@ -103,16 +109,21 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
     try:
         html_content = file_path.read_text(encoding='utf-8')
 
-        # Check for duplicate aside IDs in sidebar before processing
+        # Check for duplicate aside IDs and unwanted asides in sidebar before processing
         soup_check = BeautifulSoup(html_content, 'lxml')
         sidebar_check = soup_check.find(id='sidebar')
         duplicate_count = 0
+        unwanted_count = 0
+        unwanted_ids = {'search-2', 'meta-2'}
+
         if sidebar_check:
             aside_tags = sidebar_check.find_all('aside', id=True)
             seen_ids = set()
             for aside in aside_tags:
                 aside_id = aside.get('id')
-                if aside_id in seen_ids:
+                if aside_id in unwanted_ids:
+                    unwanted_count += 1
+                elif aside_id in seen_ids:
                     duplicate_count += 1
                 else:
                     seen_ids.add(aside_id)
@@ -120,8 +131,13 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
         modified_html = move_sidebar_after_content(html_content)
 
         if dry_run:
-            duplicate_msg = f" (would remove {duplicate_count} duplicate aside IDs)" if duplicate_count > 0 else ""
-            return True, f"Would modify file{duplicate_msg} (dry-run)"
+            messages = []
+            if unwanted_count > 0:
+                messages.append(f"would remove {unwanted_count} unwanted asides")
+            if duplicate_count > 0:
+                messages.append(f"would remove {duplicate_count} duplicate aside IDs")
+            detail_msg = f" ({', '.join(messages)})" if messages else ""
+            return True, f"Would modify file{detail_msg} (dry-run)"
 
         # Create backup if requested
         if backup:
@@ -131,8 +147,13 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
         # Write modified content
         file_path.write_text(modified_html, encoding='utf-8')
         backup_msg = " (backup created)" if backup else ""
-        duplicate_msg = f", removed {duplicate_count} duplicate aside IDs" if duplicate_count > 0 else ""
-        return True, f"Successfully modified{backup_msg}{duplicate_msg}"
+        messages = []
+        if unwanted_count > 0:
+            messages.append(f"removed {unwanted_count} unwanted asides")
+        if duplicate_count > 0:
+            messages.append(f"removed {duplicate_count} duplicate aside IDs")
+        detail_msg = f", {', '.join(messages)}" if messages else ""
+        return True, f"Successfully modified{backup_msg}{detail_msg}"
 
     except ValueError as e:
         return False, f"Skip: {e}"
