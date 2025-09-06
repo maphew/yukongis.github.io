@@ -4,25 +4,36 @@
 # dependencies = [
 #     "beautifulsoup4>=4.12.0",
 #     "lxml>=4.9.0",
+#     "click>=8.0.0",
+#     "rich>=13.0.0",
 # ]
 # ///
 
 """
 HTML DOM Sidebar Mover Script
 
-This script scans an HTML document for a section with id "sidebar" and moves it
+This script scans HTML documents for a section with id "sidebar" and moves it
 so it immediately follows the section with id "content".
 
 Usage:
-    python move_sidebar.py input.html [output.html]
-
-If no output file is specified, the input file will be modified in place.
+    python move_sidebar.py input.html              # Single file, dry-run
+    python move_sidebar.py --directory ./html/     # All .html files in directory, dry-run
+    python move_sidebar.py input.html --execute    # Actually modify the file
 """
 
 import sys
-import argparse
 from pathlib import Path
+from typing import List, Tuple
+
+import click
 from bs4 import BeautifulSoup
+from rich.console import Console
+from rich.table import Table
+from rich.panel import Panel
+from rich.progress import Progress, SpinnerColumn, TextColumn
+from rich.prompt import Confirm
+
+console = Console()
 
 
 def move_sidebar_after_content(html_content: str) -> str:
@@ -59,68 +70,152 @@ def move_sidebar_after_content(html_content: str) -> str:
     return str(soup)
 
 
-def main():
-    """Main function to handle command line arguments and file operations."""
-    parser = argparse.ArgumentParser(
-        description="Move HTML sidebar section to follow content section"
-    )
-    parser.add_argument(
-        'input_file',
-        type=Path,
-        help='Input HTML file to process'
-    )
-    parser.add_argument(
-        'output_file',
-        type=Path,
-        nargs='?',
-        help='Output HTML file (defaults to input file for in-place editing)'
-    )
-    parser.add_argument(
-        '--backup',
-        action='store_true',
-        help='Create backup of original file before modifying'
-    )
+def find_html_files(directory: Path) -> List[Path]:
+    """Find all .html files in the given directory."""
+    html_files = list(directory.glob("*.html"))
+    # Also check subdirectories
+    html_files.extend(directory.glob("**/*.html"))
+    return sorted(set(html_files))  # Remove duplicates and sort
 
-    args = parser.parse_args()
 
-    # Validate input file exists
-    if not args.input_file.exists():
-        print(f"Error: Input file '{args.input_file}' does not exist", file=sys.stderr)
-        sys.exit(1)
+def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = True) -> Tuple[bool, str]:
+    """
+    Process a single HTML file.
 
-    # Set output file (default to input for in-place editing)
-    output_file = args.output_file or args.input_file
-
+    Returns:
+        Tuple of (success, message)
+    """
     try:
-        # Read input HTML
-        print(f"Reading HTML from: {args.input_file}")
-        html_content = args.input_file.read_text(encoding='utf-8')
-
-        # Create backup if requested and doing in-place editing
-        if args.backup and output_file == args.input_file:
-            backup_file = args.input_file.with_suffix(args.input_file.suffix + '.bak')
-            backup_file.write_text(html_content, encoding='utf-8')
-            print(f"Backup created: {backup_file}")
-
-        # Process HTML
-        print("Moving sidebar section after content section...")
+        html_content = file_path.read_text(encoding='utf-8')
         modified_html = move_sidebar_after_content(html_content)
 
-        # Write output
-        output_file.write_text(modified_html, encoding='utf-8')
-        print(f"Modified HTML written to: {output_file}")
+        if dry_run:
+            return True, "Would modify file (dry-run)"
 
-        print("✅ Successfully moved sidebar after content section")
+        # Create backup if requested
+        if backup:
+            backup_file = file_path.with_suffix(file_path.suffix + '.bak')
+            backup_file.write_text(html_content, encoding='utf-8')
 
-    except FileNotFoundError:
-        print(f"Error: Could not read file '{args.input_file}'", file=sys.stderr)
-        sys.exit(1)
+        # Write modified content
+        file_path.write_text(modified_html, encoding='utf-8')
+        backup_msg = " (backup created)" if backup else ""
+        return True, f"Successfully modified{backup_msg}"
+
     except ValueError as e:
-        print(f"Error: {e}", file=sys.stderr)
-        sys.exit(1)
+        return False, f"Skip: {e}"
     except Exception as e:
-        print(f"Unexpected error: {e}", file=sys.stderr)
-        sys.exit(1)
+        return False, f"Error: {e}"
+
+
+@click.command()
+@click.argument('input_path', type=click.Path(exists=True, path_type=Path))
+@click.option(
+    '--directory', '-d',
+    is_flag=True,
+    help='Process all .html files in the given directory'
+)
+@click.option(
+    '--execute', '-e',
+    is_flag=True,
+    help='Actually modify files (default is dry-run)'
+)
+@click.option(
+    '--backup', '-b',
+    is_flag=True,
+    help='Create backup of original files before modifying'
+)
+@click.option(
+    '--confirm/--no-confirm',
+    default=True,
+    help='Ask for confirmation before processing multiple files'
+)
+def main(input_path: Path, directory: bool, execute: bool, backup: bool, confirm: bool):
+    """
+    Move HTML sidebar section to follow content section.
+
+    INPUT_PATH can be either a single .html file or a directory (with --directory flag).
+    By default, runs in dry-run mode. Use --execute to actually modify files.
+    """
+
+    # Determine files to process
+    if directory:
+        if not input_path.is_dir():
+            console.print(f"[red]Error: {input_path} is not a directory[/red]")
+            sys.exit(1)
+
+        html_files = find_html_files(input_path)
+        if not html_files:
+            console.print(f"[yellow]No .html files found in {input_path}[/yellow]")
+            sys.exit(0)
+
+        console.print(f"[blue]Found {len(html_files)} HTML files in {input_path}[/blue]")
+    else:
+        if input_path.suffix.lower() != '.html':
+            console.print(f"[red]Error: {input_path} is not an HTML file[/red]")
+            sys.exit(1)
+        html_files = [input_path]
+
+    # Show dry-run/execute mode
+    mode = "DRY-RUN" if not execute else "EXECUTE"
+    mode_color = "yellow" if not execute else "green"
+    console.print(Panel(f"Mode: [{mode_color}]{mode}[/{mode_color}]", expand=False))
+
+    if not execute:
+        console.print("[yellow]ℹ️  Running in dry-run mode. Use --execute to actually modify files.[/yellow]")
+
+    # Confirm for multiple files
+    if len(html_files) > 1 and confirm and execute:
+        if not Confirm.ask(f"Process {len(html_files)} files?"):
+            console.print("[yellow]Operation cancelled.[/yellow]")
+            sys.exit(0)
+
+    # Process files
+    results = []
+
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        console=console,
+        transient=True
+    ) as progress:
+
+        task = progress.add_task("Processing files...", total=len(html_files))
+
+        for file_path in html_files:
+            progress.update(task, description=f"Processing {file_path.name}")
+            success, message = process_single_file(file_path, backup, not execute)
+            results.append((file_path, success, message))
+            progress.advance(task)
+
+    # Display results
+    table = Table(title="Processing Results")
+    table.add_column("File", style="cyan")
+    table.add_column("Status", style="bold")
+    table.add_column("Message")
+
+    success_count = 0
+    for file_path, success, message in results:
+        status = "✅ Success" if success else "❌ Failed"
+        status_color = "green" if success else "red"
+        table.add_row(
+            str(file_path.relative_to(Path.cwd()) if file_path.is_absolute() else file_path),
+            f"[{status_color}]{status}[/{status_color}]",
+            message
+        )
+        if success:
+            success_count += 1
+
+    console.print(table)
+
+    # Summary
+    total = len(results)
+    failed = total - success_count
+
+    if failed == 0:
+        console.print(f"[green]🎉 All {total} files processed successfully![/green]")
+    else:
+        console.print(f"[yellow]⚠️  {success_count}/{total} files processed successfully, {failed} failed/skipped[/yellow]")
 
 
 if __name__ == '__main__':
