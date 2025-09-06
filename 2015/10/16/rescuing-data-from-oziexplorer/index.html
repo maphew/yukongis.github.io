@@ -1,700 +1,917 @@
 <!DOCTYPE html>
-<!-- HTML 5 --><html lang="en-US">
+<!-- HTML 5 -->
+<html lang="en-US">
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <style>
+    img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }
+    </style><!-- Jetpack Site Verification Tags -->
+    <meta name="google-site-verification" content="google9711d833ce6b14e4"><!-- This site is optimized with the Yoast SEO plugin v25.8 - https://yoast.com/wordpress/plugins/seo/ -->
+    <title>
+      Rescuing data from OziExplorer « Yukon GIS
+    </title>
+    <link rel="canonical" href="/2015/10/16/rescuing-data-from-oziexplorer/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Rescuing data from OziExplorer « Yukon GIS">
+    <meta property="og:description" content="Should you ever find yourself needing to use data locked away in OziExplorer format: drop me a line I can convert them to shapefiles for [...]">
+    <meta property="og:url" content="/2015/10/16/rescuing-data-from-oziexplorer/">
+    <meta property="og:site_name" content="Yukon GIS">
+    <meta property="article:published_time" content="2015-10-16T22:21:00+00:00">
+    <meta property="article:modified_time" content="2018-05-10T22:17:14+00:00">
+    <meta property="og:image" content="/wp-content/uploads/2017/04/clip_image001-5.png">
+    <meta name="author" content="matt">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="matt">
+    <meta name="twitter:label2" content="Est. reading time">
+    <meta name="twitter:data2" content="1 minute"><!-- / Yoast SEO plugin. -->
+    <link rel="dns-prefetch" href="//secure.gravatar.com">
+    <link rel="dns-prefetch" href="//stats.wp.com">
+    <link rel="dns-prefetch" href="//v0.wordpress.com">
+    <link rel="dns-prefetch" href="//widgets.wp.com">
+    <link rel="dns-prefetch" href="//s0.wp.com">
+    <link rel="dns-prefetch" href="//0.gravatar.com">
+    <link rel="dns-prefetch" href="//1.gravatar.com">
+    <link rel="dns-prefetch" href="//2.gravatar.com">
+    <link rel="preconnect" href="//i0.wp.com">
+    <link rel="preconnect" href="//c0.wp.com">
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2"}};
+    /*! This file is auto-generated */
+    !function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+    /* ]]> */
+    </script>
+    <link rel="stylesheet" id="jetpack_related-posts-css" href="https://c0.wp.com/p/jetpack/14.9.1/modules/related-posts/related-posts.css" type="text/css" media="all">
+    <link rel="stylesheet" id="momentous-custom-fonts-css" href="/wp-content/themes/momentous-lite/css/custom-fonts.css?ver=20180413" type="text/css" media="all">
+    <style id="wp-emoji-styles-inline-css" type="text/css">
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-
-
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
-	<!-- Jetpack Site Verification Tags -->
-<meta name="google-site-verification" content="google9711d833ce6b14e4">
-
-	<!-- This site is optimized with the Yoast SEO plugin v25.8 - https://yoast.com/wordpress/plugins/seo/ -->
-	<title>Rescuing data from OziExplorer &laquo; Yukon GIS</title>
-	<link rel="canonical" href="/2015/10/16/rescuing-data-from-oziexplorer/">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="Rescuing data from OziExplorer &laquo; Yukon GIS">
-	<meta property="og:description" content="Should you ever find yourself needing to use data locked away in OziExplorer format: drop me a line I can convert them to shapefiles for [...]">
-	<meta property="og:url" content="/2015/10/16/rescuing-data-from-oziexplorer/">
-	<meta property="og:site_name" content="Yukon GIS">
-	<meta property="article:published_time" content="2015-10-16T22:21:00+00:00">
-	<meta property="article:modified_time" content="2018-05-10T22:17:14+00:00">
-	<meta property="og:image" content="/wp-content/uploads/2017/04/clip_image001-5.png">
-	<meta name="author" content="matt">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:label1" content="Written by">
-	<meta name="twitter:data1" content="matt">
-	<meta name="twitter:label2" content="Est. reading time">
-	<meta name="twitter:data2" content="1 minute">
-	
-	<!-- / Yoast SEO plugin. -->
-
-
-<link rel="dns-prefetch" href="//secure.gravatar.com">
-<link rel="dns-prefetch" href="//stats.wp.com">
-<link rel="dns-prefetch" href="//v0.wordpress.com">
-<link rel="dns-prefetch" href="//widgets.wp.com">
-<link rel="dns-prefetch" href="//s0.wp.com">
-<link rel="dns-prefetch" href="//0.gravatar.com">
-<link rel="dns-prefetch" href="//1.gravatar.com">
-<link rel="dns-prefetch" href="//2.gravatar.com">
-<link rel="preconnect" href="//i0.wp.com">
-<link rel="preconnect" href="//c0.wp.com">
-
-
-
-<script type="text/javascript">
-/* <![CDATA[ */
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2"}};
-/*! This file is auto-generated */
-!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
-/* ]]> */
-</script>
-<link rel="stylesheet" id="jetpack_related-posts-css" href="https://c0.wp.com/p/jetpack/14.9.1/modules/related-posts/related-posts.css" type="text/css" media="all">
-<link rel="stylesheet" id="momentous-custom-fonts-css" href="/wp-content/themes/momentous-lite/css/custom-fonts.css?ver=20180413" type="text/css" media="all">
-<style id="wp-emoji-styles-inline-css" type="text/css">
-
-	img.wp-smiley, img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 0.07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}
-</style>
-<link rel="stylesheet" id="mediaelement-css" href="https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="wp-mediaelement-css" href="https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/wp-mediaelement.min.css" type="text/css" media="all">
-<style id="jetpack-sharing-buttons-style-inline-css" type="text/css">
-.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
-</style>
-<link rel="stylesheet" id="momentous-lite-stylesheet-css" href="/wp-content/themes/momentous-lite/style.css?ver=1.4.5" type="text/css" media="all">
-<link rel="stylesheet" id="genericons-css" href="https://c0.wp.com/p/jetpack/14.9.1/_inc/genericons/genericons/genericons.css" type="text/css" media="all">
-<link rel="stylesheet" id="themezee-related-posts-css" href="/wp-content/themes/momentous-lite/css/themezee-related-posts.css?ver=20160421" type="text/css" media="all">
-<link rel="stylesheet" id="jetpack_likes-css" href="https://c0.wp.com/p/jetpack/14.9.1/modules/likes/style.css" type="text/css" media="all">
-<link rel="stylesheet" id="sharedaddy-css" href="https://c0.wp.com/p/jetpack/14.9.1/modules/sharedaddy/sharing.css" type="text/css" media="all">
-<link rel="stylesheet" id="social-logos-css" href="https://c0.wp.com/p/jetpack/14.9.1/_inc/social-logos/social-logos.min.css" type="text/css" media="all">
-<script type="text/javascript" id="jetpack_related-posts-js-extra">
-/* <![CDATA[ */
-var related_posts_js_options = {"post_heading":"h4"};
-/* ]]> */
-</script>
-
-<!--[if lt IE 9]>
+        img.wp-smiley, img.emoji {
+                display: inline !important;
+                border: none !important;
+                box-shadow: none !important;
+                height: 1em !important;
+                width: 1em !important;
+                margin: 0 0.07em !important;
+                vertical-align: -0.1em !important;
+                background: none !important;
+                padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="mediaelement-css" href="https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wp-mediaelement-css" href="https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/wp-mediaelement.min.css" type="text/css" media="all">
+    <style id="jetpack-sharing-buttons-style-inline-css" type="text/css">
+    .jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+    </style>
+    <link rel="stylesheet" id="momentous-lite-stylesheet-css" href="/wp-content/themes/momentous-lite/style.css?ver=1.4.5" type="text/css" media="all">
+    <link rel="stylesheet" id="genericons-css" href="https://c0.wp.com/p/jetpack/14.9.1/_inc/genericons/genericons/genericons.css" type="text/css" media="all">
+    <link rel="stylesheet" id="themezee-related-posts-css" href="/wp-content/themes/momentous-lite/css/themezee-related-posts.css?ver=20160421" type="text/css" media="all">
+    <link rel="stylesheet" id="jetpack_likes-css" href="https://c0.wp.com/p/jetpack/14.9.1/modules/likes/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="sharedaddy-css" href="https://c0.wp.com/p/jetpack/14.9.1/modules/sharedaddy/sharing.css" type="text/css" media="all">
+    <link rel="stylesheet" id="social-logos-css" href="https://c0.wp.com/p/jetpack/14.9.1/_inc/social-logos/social-logos.min.css" type="text/css" media="all">
+    <script type="text/javascript" id="jetpack_related-posts-js-extra">
+    /* <![CDATA[ */
+    var related_posts_js_options = {"post_heading":"h4"};
+    /* ]]> */
+    </script><!--[if lt IE 9]>
 <script type="text/javascript" src="/wp-content/themes/momentous-lite/js/html5shiv.min.js?ver=3.7.3" id="html5shiv-js"></script>
 <![endif]-->
-<script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
-<script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-<script type="text/javascript" src="/wp-content/themes/momentous-lite/js/navigation.js?ver=20160719" id="momentous-lite-jquery-navigation-js"></script>
-<script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/imagesloaded.min.js" id="imagesloaded-js"></script>
-<script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/masonry.min.js" id="masonry-js"></script>
-<script type="text/javascript" src="/wp-content/themes/momentous-lite/js/masonry-init.js?ver=20160719" id="momentous-lite-masonry-js"></script>
-<link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/42"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 
-<link rel="shortlink" href="https://wp.me/p8FMgP-G">
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2015%2F10%2F16%2Frescuing-data-from-oziexplorer%2F">
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2015%2F10%2F16%2Frescuing-data-from-oziexplorer%2F&amp;format=xml">
-	<style>img#wpstats{display:none}</style>
-		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" id="custom-background-css">
-body.custom-background { background-color: #6b7a6b; }
-</style>
-			<style type="text/css" id="wp-custom-css">
-			.type-post, aside, .post-pagination {border-radius: 0.25em;}
-.more-link{border-radius: 0.2em;}
-code {padding:inherit}		</style>
-		</head>
-
-<body class="wp-singular post-template-default single single-post postid-42 single-format-standard custom-background wp-theme-momentous-lite">
-
-<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
-
-<div id="wrapper" class="hfeed">
-
-	<div id="header-wrap">
-
-		
-			<div id="header-search-wrap">
-
-				<div id="header-search" class="container clearfix">
-					
-	<form role="search" method="get" class="search-form" action="/">
-		<label>
-			<span class="screen-reader-text">Search for:</span>
-			<input type="search" class="search-field" placeholder="To search, type and hit enter &hellip;" value="" name="s">
-		</label>
-		<button type="submit" class="search-submit">
-			<span class="genericon-search"></span>
-		</button>
-	</form>
-
-				</div>
-
-			</div>
-
-		
-		<header id="header" class="container clearfix" role="banner">
-
-			<div id="logo">
-
-								
-		<p class="site-title"><a href="/" rel="home">Yukon GIS</a></p>
-
-					
-			<p class="site-description">geospatial tidbits for and from the Yukon</p>
-
-		
-			</div>
-
-			<div id="header-content" class="clearfix">
-
-									<div class="header-search-icon">
-						<span class="genericon-search"></span>
-					</div>
-				
-				
-			</div>
-
-		</header>
-
-		<div id="navigation-wrap">
-
-			<div id="navigation" class="container clearfix">
-
-				
-
-				<nav id="mainnav" class="clearfix" role="navigation">
-					<ul id="mainnav-menu" class="main-navigation-menu menu"><li class="page_item page-item-106"><a href="/about/">About</a></li>
-<li class="page_item page-item-152"><a href="/recent-changes/">Recent Changes</a></li>
-</ul>				</nav>
-
-			</div>
-
-		</div>
-
-	</div>
-
-	
-	<div id="wrap" class="container clearfix">
-		
-		<section id="content" class="primary" role="main">
-		
-					
-		
-	<article id="post-42" class="post-42 post type-post status-publish format-standard hentry category-how-to tag-conversion">
-	
-				
-		<h1 class="entry-title post-title">Rescuing data from OziExplorer</h1>		
-		<div class="entry-meta postmeta"><span class="meta-date">Posted on <a href="/2015/10/16/rescuing-data-from-oziexplorer/" title="10:21 pm" rel="bookmark"><time class="entry-date published updated" datetime="2015-10-16T22:21:00-07:00">2015-Oct-16</time></a></span><span class="meta-author"> by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" title="View all posts by matt" rel="author">matt</a></span></span></div>
-
-		<div class="entry clearfix">
-			<p>Should you ever find yourself needing to use data locked away in OziExplorer format: drop me a line I can convert them to shapefiles for you lickety split. However, if I&rsquo;ve been smushed under a bus or some other unpleasant scenario here&rsquo;s how you can help yourself:</p>
-<p><a href="http://www.gpsvisualizer.com/gpsbabel/"><img data-recalc-dims="1" fetchpriority="high" decoding="async" style="background-image: none; float: right; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image001" src="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2017/04/clip_image001-5.png?resize=404%2C449&amp;ssl=1" alt="clip_image001" width="404" height="449" align="right" border="0"></a>Use the free <a href="http://www.gpsvisualizer.com/gpsbabel/">GPS Visualizer</a> online service.</p>
-<p>What I particularly like about gps-viz, aside from being available without installing and instant viewing gratification, is that it shows the command line used to use as templates in your own scripts.</p>
-<p><em>The following GPSBabel command was executed:</em></p>
-<p><span style="background-color: #cccccc;">gpsbabel -w -r -t -i ozi -f &ldquo;ozi_tracks_008.plt&rdquo; -o gpx -F &ldquo;converted_tracks.gpx&rdquo;</span></p>
-<p>Which is pretty good if GPX or KML is what you want. There&rsquo;s some extra steps to get to shapefile for easy consumption in ArcMap though. For that we turn to the <a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a> command line tool:</p>
-<p><span style="background-color: #cccccc;">ogr2ogr output_folder &ldquo;ozi_tracks_008.plt&rdquo;</span></p>
-<p>&nbsp;</p>
-<p><a href="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2017/04/image.png?ssl=1"><img data-recalc-dims="1" decoding="async" style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border: 0px;" title="image" src="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2017/04/image_thumb.png?resize=427%2C315&amp;ssl=1" alt="image" width="427" height="315" border="0"></a></p>
-<h3>Sources:</h3>
-<ul>
-<li><a href="http://gis.stackexchange.com/questions/26642/importing-wayoints-from-oziexplorer-wpt-files">importing wayoints from OziExplorer wpt files</a></li>
-<li><a href="http://gis.stackexchange.com/questions/166816/gps-babel-and-shapefile-output">GPS Babel and shapefile output?</a></li>
-</ul>
-</div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" id="like-post-wrapper-128167691-42-68b6a8ac712b0" data-src="https://widgets.wp.com/likes/?ver=14.9.1#blog_id=128167691&amp;post_id=42&amp;origin=www.yukongis.ca&amp;obj_id=128167691-42-68b6a8ac712b0" data-name="like-post-frame-128167691-42-68b6a8ac712b0" data-title="Like or Reblog"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
-<div id="jp-relatedposts" class="jp-relatedposts">
-	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
-</div>			<!-- <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-			xmlns:dc="http://purl.org/dc/elements/1.1/"
-			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
-		<rdf:Description rdf:about="/2015/10/16/rescuing-data-from-oziexplorer/"
+    <script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+    <script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+    <script type="text/javascript" src="/wp-content/themes/momentous-lite/js/navigation.js?ver=20160719" id="momentous-lite-jquery-navigation-js"></script>
+    <script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/imagesloaded.min.js" id="imagesloaded-js"></script>
+    <script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/masonry.min.js" id="masonry-js"></script>
+    <script type="text/javascript" src="/wp-content/themes/momentous-lite/js/masonry-init.js?ver=20160719" id="momentous-lite-masonry-js"></script>
+    <link rel="https://api.w.org/" href="/wp-json/">
+    <link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/42">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+    <link rel="shortlink" href="https://wp.me/p8FMgP-G">
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2015%2F10%2F16%2Frescuing-data-from-oziexplorer%2F">
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=https%3A%2F%2F%2F2015%2F10%2F16%2Frescuing-data-from-oziexplorer%2F&amp;format=xml">
+    <style>
+    img#wpstats{display:none}
+    </style>
+    <style type="text/css">
+    .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+    </style>
+    <style type="text/css" id="custom-background-css">
+    body.custom-background { background-color: #6b7a6b; }
+    </style>
+    <style type="text/css" id="wp-custom-css">
+                        .type-post, aside, .post-pagination {border-radius: 0.25em;}
+    .more-link{border-radius: 0.2em;}
+    code {padding:inherit}          
+    </style>
+  </head>
+  <body class="wp-singular post-template-default single single-post postid-42 single-format-standard custom-background wp-theme-momentous-lite">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <div id="wrapper" class="hfeed">
+      <div id="header-wrap">
+        <div id="header-search-wrap">
+          <div id="header-search" class="container clearfix">
+            <form role="search" method="get" class="search-form" action="/">
+              <label><span class="screen-reader-text">Search for:</span> <input type="search" class="search-field" placeholder="To search, type and hit enter …" value="" name="s"></label>
+            </form>
+          </div>
+        </div>
+        <header id="header" class="container clearfix" role="banner">
+          <div id="logo">
+            <p class="site-title">
+              <a href="/" rel="home">Yukon GIS</a>
+            </p>
+            <p class="site-description">
+              geospatial tidbits for and from the Yukon
+            </p>
+          </div>
+          <div id="header-content" class="clearfix">
+            <div class="header-search-icon"></div>
+          </div>
+        </header>
+        <div id="navigation-wrap">
+          <div id="navigation" class="container clearfix">
+            <nav id="mainnav" class="clearfix" role="navigation">
+              <ul id="mainnav-menu" class="main-navigation-menu menu">
+                <li class="page_item page-item-106">
+                  <a href="/about/">About</a>
+                </li>
+                <li class="page_item page-item-152">
+                  <a href="/recent-changes/">Recent Changes</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div id="wrap" class="container clearfix">
+        <section id="content" class="primary" role="main">
+          <article id="post-42" class="post-42 post type-post status-publish format-standard hentry category-how-to tag-conversion">
+            <h1 class="entry-title post-title">
+              Rescuing data from OziExplorer
+            </h1>
+            <div class="entry-meta postmeta">
+              <span class="meta-date">Posted on <a href="/2015/10/16/rescuing-data-from-oziexplorer/" title="10:21 pm" rel="bookmark"><time class="entry-date published updated" datetime="2015-10-16T22:21:00-07:00">2015-Oct-16</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" title="View all posts by matt" rel="author">matt</a></span></span>
+            </div>
+            <div class="entry clearfix">
+              <p>
+                Should you ever find yourself needing to use data locked away in OziExplorer format: drop me a line I can convert them to shapefiles for you lickety split. However, if I’ve been smushed under a bus or some other unpleasant scenario here’s how you can help yourself:
+              </p>
+              <p>
+                <a href="http://www.gpsvisualizer.com/gpsbabel/"><img data-recalc-dims="1" fetchpriority="high" decoding="async" style="background-image: none; float: right; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border: 0px;" title="clip_image001" src="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2017/04/clip_image001-5.png?resize=404%2C449&amp;ssl=1" alt="clip_image001" width="404" height="449" align="right" border="0"></a>Use the free <a href="http://www.gpsvisualizer.com/gpsbabel/">GPS Visualizer</a> online service.
+              </p>
+              <p>
+                What I particularly like about gps-viz, aside from being available without installing and instant viewing gratification, is that it shows the command line used to use as templates in your own scripts.
+              </p>
+              <p>
+                <em>The following GPSBabel command was executed:</em>
+              </p>
+              <p>
+                <span style="background-color: #cccccc;">gpsbabel -w -r -t -i ozi -f “ozi_tracks_008.plt” -o gpx -F “converted_tracks.gpx”</span>
+              </p>
+              <p>
+                Which is pretty good if GPX or KML is what you want. There’s some extra steps to get to shapefile for easy consumption in ArcMap though. For that we turn to the <a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a> command line tool:
+              </p>
+              <p>
+                <span style="background-color: #cccccc;">ogr2ogr output_folder “ozi_tracks_008.plt”</span>
+              </p>
+              <p>
+                &nbsp;
+              </p>
+              <p>
+                <a href="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2017/04/image.png?ssl=1"><img data-recalc-dims="1" decoding="async" style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border: 0px;" title="image" src="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2017/04/image_thumb.png?resize=427%2C315&amp;ssl=1" alt="image" width="427" height="315" border="0"></a>
+              </p>
+              <h3>
+                Sources:
+              </h3>
+              <ul>
+                <li>
+                  <a href="http://gis.stackexchange.com/questions/26642/importing-wayoints-from-oziexplorer-wpt-files">importing wayoints from OziExplorer wpt files</a>
+                </li>
+                <li>
+                  <a href="http://gis.stackexchange.com/questions/166816/gps-babel-and-shapefile-output">GPS Babel and shapefile output?</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </div>
+      <div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" id="like-post-wrapper-128167691-42-68b6a8ac712b0" data-src="https://widgets.wp.com/likes/?ver=14.9.1#blog_id=128167691&amp;post_id=42&amp;origin=www.yukongis.ca&amp;obj_id=128167691-42-68b6a8ac712b0" data-name="like-post-frame-128167691-42-68b6a8ac712b0" data-title="Like or Reblog">
+        <h3 class="sd-title">
+          Like this:
+        </h3>
+        <div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;">
+          <span class="button"><span>Like</span></span> <span class="loading">Loading...</span>
+        </div><a class="sd-link-color"></a>
+      </div>
+      <div id="jp-relatedposts" class="jp-relatedposts">
+        <h3 class="jp-relatedposts-headline">
+          <em>Related</em>
+        </h3>
+      </div><!-- <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+                <rdf:Description rdf:about="/2015/10/16/rescuing-data-from-oziexplorer/"
     dc:identifier="/2015/10/16/rescuing-data-from-oziexplorer/"
     dc:title="Rescuing data from OziExplorer"
     trackback:ping="/2015/10/16/rescuing-data-from-oziexplorer/trackback/" />
 </rdf:RDF> -->
-			<div class="page-links"></div>			
-		</div>
-			
-		<div class="postinfo clearfix">
-			<div class="meta-comments">
-				<a href="/2015/10/16/rescuing-data-from-oziexplorer/#respond">0</a>			</div>
+      <div class="page-links"></div>
+    </div>
+    <div class="postinfo clearfix">
+      <div class="meta-comments">
+        <a href="/2015/10/16/rescuing-data-from-oziexplorer/#respond">0</a>
+      </div><span class="meta-category"><a href="/category/how-to/" rel="category tag">How-to</a></span> <span class="meta-tags"><a href="/tag/conversion/" rel="tag">conversion</a></span>
+    </div>
+    <nav class="navigation post-navigation" aria-label="Posts">
+      <h2 class="screen-reader-text">
+        Post navigation
+      </h2>
+      <div class="nav-links">
+        <div class="nav-previous">
+          <a href="/2015/08/28/where-people-ride/" rel="prev">« Where people ride</a>
+        </div>
+        <div class="nav-next">
+          <a href="/2015/11/10/editing-shapefile-dbf/" rel="next">Editing Shapefile DBF »</a>
+        </div>
+      </div>
+    </nav>
+    <div id="comments"></div>
+    <section id="sidebar" class="secondary clearfix" role="complementary">
+      <aside id="search-2" class="widget widget_search">
+        <form role="search" method="get" class="search-form" action="/">
+          <label><span class="screen-reader-text">Search for:</span> <input type="search" class="search-field" placeholder="To search, type and hit enter …" value="" name="s"></label>
+        </form>
+      </aside>
+      <aside id="recent-posts-2" class="widget widget_recent_entries">
+        <h3 class="widgettitle">
+          <span>Recent Posts</span>
+        </h3>
+        <ul>
+          <li>
+            <a href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/">Go to Juneau in 3D in a browser</a>
+          </li>
+          <li>
+            <a href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/">Using Layer & Map Packages outside of ArcGIS</a>
+          </li>
+          <li>
+            <a href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/">Using spatial features from an ArcGIS online browser app in Pro</a>
+          </li>
+          <li>
+            <a href="/2021/11/07/merging-gpx-files/">Merging gpx files</a>
+          </li>
+          <li>
+            <a href="/2021/11/07/unintended-map-art/">Unintended map art</a>
+          </li>
+        </ul>
+      </aside>
+      <aside id="archives-2" class="widget widget_archive">
+        <h3 class="widgettitle">
+          <span>Archives</span>
+        </h3>
+        <ul>
+          <li>
+            <a href="/2021/11/">November 2021</a>
+          </li>
+          <li>
+            <a href="/2021/02/">February 2021</a>
+          </li>
+          <li>
+            <a href="/2020/12/">December 2020</a>
+          </li>
+          <li>
+            <a href="/2020/11/">November 2020</a>
+          </li>
+          <li>
+            <a href="/2019/11/">November 2019</a>
+          </li>
+          <li>
+            <a href="/2019/06/">June 2019</a>
+          </li>
+          <li>
+            <a href="/2019/05/">May 2019</a>
+          </li>
+          <li>
+            <a href="/2019/01/">January 2019</a>
+          </li>
+          <li>
+            <a href="/2018/10/">October 2018</a>
+          </li>
+          <li>
+            <a href="/2018/09/">September 2018</a>
+          </li>
+          <li>
+            <a href="/2018/08/">August 2018</a>
+          </li>
+          <li>
+            <a href="/2018/01/">January 2018</a>
+          </li>
+          <li>
+            <a href="/2017/10/">October 2017</a>
+          </li>
+          <li>
+            <a href="/2017/07/">July 2017</a>
+          </li>
+          <li>
+            <a href="/2017/06/">June 2017</a>
+          </li>
+          <li>
+            <a href="/2017/05/">May 2017</a>
+          </li>
+          <li>
+            <a href="/2017/03/">March 2017</a>
+          </li>
+          <li>
+            <a href="/2016/11/">November 2016</a>
+          </li>
+          <li>
+            <a href="/2016/08/">August 2016</a>
+          </li>
+          <li>
+            <a href="/2016/05/">May 2016</a>
+          </li>
+          <li>
+            <a href="/2016/04/">April 2016</a>
+          </li>
+          <li>
+            <a href="/2016/01/">January 2016</a>
+          </li>
+          <li>
+            <a href="/2015/12/">December 2015</a>
+          </li>
+          <li>
+            <a href="/2015/11/">November 2015</a>
+          </li>
+          <li>
+            <a href="/2015/10/">October 2015</a>
+          </li>
+          <li>
+            <a href="/2015/08/">August 2015</a>
+          </li>
+          <li>
+            <a href="/2015/06/">June 2015</a>
+          </li>
+          <li>
+            <a href="/2015/04/">April 2015</a>
+          </li>
+          <li>
+            <a href="/2015/01/">January 2015</a>
+          </li>
+          <li>
+            <a href="/2014/11/">November 2014</a>
+          </li>
+          <li>
+            <a href="/2014/10/">October 2014</a>
+          </li>
+          <li>
+            <a href="/2014/05/">May 2014</a>
+          </li>
+          <li>
+            <a href="/2014/03/">March 2014</a>
+          </li>
+          <li>
+            <a href="/2013/09/">September 2013</a>
+          </li>
+          <li>
+            <a href="/2012/07/">July 2012</a>
+          </li>
+          <li>
+            <a href="/2012/04/">April 2012</a>
+          </li>
+          <li>
+            <a href="/2012/01/">January 2012</a>
+          </li>
+          <li>
+            <a href="/2011/11/">November 2011</a>
+          </li>
+          <li>
+            <a href="/2011/06/">June 2011</a>
+          </li>
+          <li>
+            <a href="/2010/08/">August 2010</a>
+          </li>
+          <li>
+            <a href="/2010/05/">May 2010</a>
+          </li>
+          <li>
+            <a href="/2010/02/">February 2010</a>
+          </li>
+          <li>
+            <a href="/2010/01/">January 2010</a>
+          </li>
+          <li>
+            <a href="/2009/12/">December 2009</a>
+          </li>
+          <li>
+            <a href="/2009/10/">October 2009</a>
+          </li>
+          <li>
+            <a href="/2009/02/">February 2009</a>
+          </li>
+          <li>
+            <a href="/2008/07/">July 2008</a>
+          </li>
+          <li>
+            <a href="/2008/03/">March 2008</a>
+          </li>
+          <li>
+            <a href="/2007/04/">April 2007</a>
+          </li>
+          <li>
+            <a href="/2006/06/">June 2006</a>
+          </li>
+          <li>
+            <a href="/2006/04/">April 2006</a>
+          </li>
+          <li>
+            <a href="/2005/03/">March 2005</a>
+          </li>
+        </ul>
+      </aside>
+      <aside id="categories-2" class="widget widget_categories">
+        <h3 class="widgettitle">
+          <span>Categories</span>
+        </h3>
+        <ul>
+          <li class="cat-item cat-item-28">
+            <a href="/category/arcinfo/">ArcInfo</a>
+          </li>
+          <li class="cat-item cat-item-18">
+            <a href="/category/arcmap/">ArcMap</a>
+          </li>
+          <li class="cat-item cat-item-35">
+            <a href="/category/arcpro/">ArcPro</a>
+          </li>
+          <li class="cat-item cat-item-30">
+            <a href="/category/python/arcpy/">arcpy</a>
+          </li>
+          <li class="cat-item cat-item-19">
+            <a href="/category/cartography/">Cartography</a>
+          </li>
+          <li class="cat-item cat-item-10">
+            <a href="/category/data/">Data</a>
+          </li>
+          <li class="cat-item cat-item-25">
+            <a href="/category/gdal-ogr/">Gdal-ogr</a>
+          </li>
+          <li class="cat-item cat-item-23">
+            <a href="/category/geoprocessing/">Geoprocessing</a>
+          </li>
+          <li class="cat-item cat-item-2">
+            <a href="/category/how-to/">How-to</a>
+          </li>
+          <li class="cat-item cat-item-16">
+            <a href="/category/meta/">Meta</a>
+          </li>
+          <li class="cat-item cat-item-32">
+            <a href="/category/opinion/">Opinion</a>
+          </li>
+          <li class="cat-item cat-item-29">
+            <a href="/category/python/">Python</a>
+          </li>
+          <li class="cat-item cat-item-31">
+            <a href="/category/qgis/">Qgis</a>
+          </li>
+          <li class="cat-item cat-item-26">
+            <a href="/category/scripting/">Scripting</a>
+          </li>
+          <li class="cat-item cat-item-20">
+            <a href="/category/tip/">Tip</a>
+          </li>
+          <li class="cat-item cat-item-1">
+            <a href="/category/uncategorized/">Uncategorized</a>
+          </li>
+          <li class="cat-item cat-item-27">
+            <a href="/category/v9-x/">v9.x</a>
+          </li>
+        </ul>
+      </aside>
+      <aside id="meta-2" class="widget widget_meta">
+        <h3 class="widgettitle">
+          <span>Meta</span>
+        </h3>
+        <ul>
+          <li>
+            <a href="/feed/">Entries feed</a>
+          </li>
+          <li>
+            <a href="/comments/feed/">Comments feed</a>
+          </li>
+          <li>
+            <a href="https://wordpress.org/">WordPress.org</a>
+          </li>
+        </ul>
+      </aside>
+      <aside id="search-2" class="widget widget_search">
+        <form role="search" method="get" class="search-form" action="/">
+          <label><span class="screen-reader-text">Search for:</span> <input type="search" class="search-field" placeholder="To search, type and hit enter …" value="" name="s"></label>
+        </form>
+      </aside>
+      <aside id="recent-posts-2" class="widget widget_recent_entries">
+        <h3 class="widgettitle">
+          <span>Recent Posts</span>
+        </h3>
+        <ul>
+          <li>
+            <a href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/">Go to Juneau in 3D in a browser</a>
+          </li>
+          <li>
+            <a href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/">Using Layer & Map Packages outside of ArcGIS</a>
+          </li>
+          <li>
+            <a href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/">Using spatial features from an ArcGIS online browser app in Pro</a>
+          </li>
+          <li>
+            <a href="/2021/11/07/merging-gpx-files/">Merging gpx files</a>
+          </li>
+          <li>
+            <a href="/2021/11/07/unintended-map-art/">Unintended map art</a>
+          </li>
+        </ul>
+      </aside>
+      <aside id="archives-2" class="widget widget_archive">
+        <h3 class="widgettitle">
+          <span>Archives</span>
+        </h3>
+        <ul>
+          <li>
+            <a href="/2021/11/">November 2021</a>
+          </li>
+          <li>
+            <a href="/2021/02/">February 2021</a>
+          </li>
+          <li>
+            <a href="/2020/12/">December 2020</a>
+          </li>
+          <li>
+            <a href="/2020/11/">November 2020</a>
+          </li>
+          <li>
+            <a href="/2019/11/">November 2019</a>
+          </li>
+          <li>
+            <a href="/2019/06/">June 2019</a>
+          </li>
+          <li>
+            <a href="/2019/05/">May 2019</a>
+          </li>
+          <li>
+            <a href="/2019/01/">January 2019</a>
+          </li>
+          <li>
+            <a href="/2018/10/">October 2018</a>
+          </li>
+          <li>
+            <a href="/2018/09/">September 2018</a>
+          </li>
+          <li>
+            <a href="/2018/08/">August 2018</a>
+          </li>
+          <li>
+            <a href="/2018/01/">January 2018</a>
+          </li>
+          <li>
+            <a href="/2017/10/">October 2017</a>
+          </li>
+          <li>
+            <a href="/2017/07/">July 2017</a>
+          </li>
+          <li>
+            <a href="/2017/06/">June 2017</a>
+          </li>
+          <li>
+            <a href="/2017/05/">May 2017</a>
+          </li>
+          <li>
+            <a href="/2017/03/">March 2017</a>
+          </li>
+          <li>
+            <a href="/2016/11/">November 2016</a>
+          </li>
+          <li>
+            <a href="/2016/08/">August 2016</a>
+          </li>
+          <li>
+            <a href="/2016/05/">May 2016</a>
+          </li>
+          <li>
+            <a href="/2016/04/">April 2016</a>
+          </li>
+          <li>
+            <a href="/2016/01/">January 2016</a>
+          </li>
+          <li>
+            <a href="/2015/12/">December 2015</a>
+          </li>
+          <li>
+            <a href="/2015/11/">November 2015</a>
+          </li>
+          <li>
+            <a href="/2015/10/">October 2015</a>
+          </li>
+          <li>
+            <a href="/2015/08/">August 2015</a>
+          </li>
+          <li>
+            <a href="/2015/06/">June 2015</a>
+          </li>
+          <li>
+            <a href="/2015/04/">April 2015</a>
+          </li>
+          <li>
+            <a href="/2015/01/">January 2015</a>
+          </li>
+          <li>
+            <a href="/2014/11/">November 2014</a>
+          </li>
+          <li>
+            <a href="/2014/10/">October 2014</a>
+          </li>
+          <li>
+            <a href="/2014/05/">May 2014</a>
+          </li>
+          <li>
+            <a href="/2014/03/">March 2014</a>
+          </li>
+          <li>
+            <a href="/2013/09/">September 2013</a>
+          </li>
+          <li>
+            <a href="/2012/07/">July 2012</a>
+          </li>
+          <li>
+            <a href="/2012/04/">April 2012</a>
+          </li>
+          <li>
+            <a href="/2012/01/">January 2012</a>
+          </li>
+          <li>
+            <a href="/2011/11/">November 2011</a>
+          </li>
+          <li>
+            <a href="/2011/06/">June 2011</a>
+          </li>
+          <li>
+            <a href="/2010/08/">August 2010</a>
+          </li>
+          <li>
+            <a href="/2010/05/">May 2010</a>
+          </li>
+          <li>
+            <a href="/2010/02/">February 2010</a>
+          </li>
+          <li>
+            <a href="/2010/01/">January 2010</a>
+          </li>
+          <li>
+            <a href="/2009/12/">December 2009</a>
+          </li>
+          <li>
+            <a href="/2009/10/">October 2009</a>
+          </li>
+          <li>
+            <a href="/2009/02/">February 2009</a>
+          </li>
+          <li>
+            <a href="/2008/07/">July 2008</a>
+          </li>
+          <li>
+            <a href="/2008/03/">March 2008</a>
+          </li>
+          <li>
+            <a href="/2007/04/">April 2007</a>
+          </li>
+          <li>
+            <a href="/2006/06/">June 2006</a>
+          </li>
+          <li>
+            <a href="/2006/04/">April 2006</a>
+          </li>
+          <li>
+            <a href="/2005/03/">March 2005</a>
+          </li>
+        </ul>
+      </aside>
+      <aside id="categories-2" class="widget widget_categories">
+        <h3 class="widgettitle">
+          <span>Categories</span>
+        </h3>
+        <ul>
+          <li class="cat-item cat-item-28">
+            <a href="/category/arcinfo/">ArcInfo</a>
+          </li>
+          <li class="cat-item cat-item-18">
+            <a href="/category/arcmap/">ArcMap</a>
+          </li>
+          <li class="cat-item cat-item-35">
+            <a href="/category/arcpro/">ArcPro</a>
+          </li>
+          <li class="cat-item cat-item-30">
+            <a href="/category/python/arcpy/">arcpy</a>
+          </li>
+          <li class="cat-item cat-item-19">
+            <a href="/category/cartography/">Cartography</a>
+          </li>
+          <li class="cat-item cat-item-10">
+            <a href="/category/data/">Data</a>
+          </li>
+          <li class="cat-item cat-item-25">
+            <a href="/category/gdal-ogr/">Gdal-ogr</a>
+          </li>
+          <li class="cat-item cat-item-23">
+            <a href="/category/geoprocessing/">Geoprocessing</a>
+          </li>
+          <li class="cat-item cat-item-2">
+            <a href="/category/how-to/">How-to</a>
+          </li>
+          <li class="cat-item cat-item-16">
+            <a href="/category/meta/">Meta</a>
+          </li>
+          <li class="cat-item cat-item-32">
+            <a href="/category/opinion/">Opinion</a>
+          </li>
+          <li class="cat-item cat-item-29">
+            <a href="/category/python/">Python</a>
+          </li>
+          <li class="cat-item cat-item-31">
+            <a href="/category/qgis/">Qgis</a>
+          </li>
+          <li class="cat-item cat-item-26">
+            <a href="/category/scripting/">Scripting</a>
+          </li>
+          <li class="cat-item cat-item-20">
+            <a href="/category/tip/">Tip</a>
+          </li>
+          <li class="cat-item cat-item-1">
+            <a href="/category/uncategorized/">Uncategorized</a>
+          </li>
+          <li class="cat-item cat-item-27">
+            <a href="/category/v9-x/">v9.x</a>
+          </li>
+        </ul>
+      </aside>
+      <aside id="meta-2" class="widget widget_meta">
+        <h3 class="widgettitle">
+          <span>Meta</span>
+        </h3>
+        <ul>
+          <li>
+            <a href="/feed/">Entries feed</a>
+          </li>
+          <li>
+            <a href="/comments/feed/">Comments feed</a>
+          </li>
+          <li>
+            <a href="https://wordpress.org/">WordPress.org</a>
+          </li>
+        </ul>
+      </aside>
+    </section>
+    <div id="footer-bg">
+      <div id="footer-wrap">
+        <footer id="footer" class="container clearfix" role="contentinfo">
+          <span id="footer-text"></span>
+          <div id="credit-link">
+            Powered by and <a href="https://themezee.com/themes/momentous/" title="Momentous WordPress Theme">Momentous</a>.
+          </div>
+        </footer>
+      </div>
+    </div><!-- end #wrapper -->
+    <script type="speculationrules">
+    {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/momentous-lite\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+    </script> 
+    <script type="text/javascript">
 
-		
-			<span class="meta-category">
-				<a href="/category/how-to/" rel="category tag">How-to</a>			</span>
+                window.WPCOM_sharing_counts = {"\/2015\/10\/16\/rescuing-data-from-oziexplorer\/":42};
+    </script> 
+    <script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async="async" data-wp-strategy="async"></script> 
+    <script type="text/javascript" id="jetpack-stats-js-before">
 
-		
-				<span class="meta-tags">
-					<a href="/tag/conversion/" rel="tag">conversion</a>				</span>
+    /* <![CDATA[ */
+    _stq = window._stq || [];
+    _stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"128167691\",\"post\":\"42\",\"tz\":\"-7\",\"srv\":\"www.yukongis.ca\",\"j\":\"1:14.9.1\"}") ]);
+    _stq.push([ "clickTrackerInit", "128167691", "42" ]);
+    /* ]]> */
+    </script> 
+    <script type="text/javascript" id="sharing-js-js-extra">
 
-			</div>
+    /* <![CDATA[ */
+    var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+    /* ]]> */
+    </script> 
+    <script type="text/javascript" id="sharing-js-js-after">
 
-	</article>
-			
-		
-	<nav class="navigation post-navigation" aria-label="Posts">
-		<h2 class="screen-reader-text">Post navigation</h2>
-		<div class="nav-links"><div class="nav-previous"><a href="/2015/08/28/where-people-ride/" rel="prev">&laquo; Where people ride</a></div><div class="nav-next"><a href="/2015/11/10/editing-shapefile-dbf/" rel="next">Editing Shapefile DBF &raquo;</a></div></div>
-	</nav>			
-				
-		
+    /* <![CDATA[ */
+    var windowOpen;
+                        ( function () {
+                                function matches( el, sel ) {
+                                        return !! (
+                                                el.matches && el.matches( sel ) ||
+                                                el.msMatchesSelector && el.msMatchesSelector( sel )
+                                        );
+                                }
 
+                                document.body.addEventListener( 'click', function ( event ) {
+                                        if ( ! event.target ) {
+                                                return;
+                                        }
 
-	<div id="comments">
-	
-		
-						
-			
-	</div>
+                                        var el;
+                                        if ( matches( event.target, 'a.share-twitter' ) ) {
+                                                el = event.target;
+                                        } else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+                                                el = event.target.parentNode;
+                                        }
 
-		
-		</section>
-		
-		
-	<section id="sidebar" class="secondary clearfix" role="complementary">
+                                        if ( el ) {
+                                                event.preventDefault();
 
-		<aside id="search-2" class="widget widget_search">
-	<form role="search" method="get" class="search-form" action="/">
-		<label>
-			<span class="screen-reader-text">Search for:</span>
-			<input type="search" class="search-field" placeholder="To search, type and hit enter &hellip;" value="" name="s">
-		</label>
-		<button type="submit" class="search-submit">
-			<span class="genericon-search"></span>
-		</button>
-	</form>
+                                                // If there's another sharing window open, close it.
+                                                if ( typeof windowOpen !== 'undefined' ) {
+                                                        windowOpen.close();
+                                                }
+                                                windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+                                                return false;
+                                        }
+                                } );
+                        } )();
+    var windowOpen;
+                        ( function () {
+                                function matches( el, sel ) {
+                                        return !! (
+                                                el.matches && el.matches( sel ) ||
+                                                el.msMatchesSelector && el.msMatchesSelector( sel )
+                                        );
+                                }
 
-</aside>
-		<aside id="recent-posts-2" class="widget widget_recent_entries">
-		<h3 class="widgettitle"><span>Recent Posts</span></h3>
-		<ul>
-											<li>
-					<a href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/">Go to Juneau in 3D in a browser</a>
-									</li>
-											<li>
-					<a href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/">Using Layer &amp; Map Packages outside of ArcGIS</a>
-									</li>
-											<li>
-					<a href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/">Using spatial features from an ArcGIS online browser app in Pro</a>
-									</li>
-											<li>
-					<a href="/2021/11/07/merging-gpx-files/">Merging gpx files</a>
-									</li>
-											<li>
-					<a href="/2021/11/07/unintended-map-art/">Unintended map art</a>
-									</li>
-					</ul>
+                                document.body.addEventListener( 'click', function ( event ) {
+                                        if ( ! event.target ) {
+                                                return;
+                                        }
 
-		</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widgettitle"><span>Archives</span></h3>
-			<ul>
-					<li><a href="/2021/11/">November 2021</a></li>
-	<li><a href="/2021/02/">February 2021</a></li>
-	<li><a href="/2020/12/">December 2020</a></li>
-	<li><a href="/2020/11/">November 2020</a></li>
-	<li><a href="/2019/11/">November 2019</a></li>
-	<li><a href="/2019/06/">June 2019</a></li>
-	<li><a href="/2019/05/">May 2019</a></li>
-	<li><a href="/2019/01/">January 2019</a></li>
-	<li><a href="/2018/10/">October 2018</a></li>
-	<li><a href="/2018/09/">September 2018</a></li>
-	<li><a href="/2018/08/">August 2018</a></li>
-	<li><a href="/2018/01/">January 2018</a></li>
-	<li><a href="/2017/10/">October 2017</a></li>
-	<li><a href="/2017/07/">July 2017</a></li>
-	<li><a href="/2017/06/">June 2017</a></li>
-	<li><a href="/2017/05/">May 2017</a></li>
-	<li><a href="/2017/03/">March 2017</a></li>
-	<li><a href="/2016/11/">November 2016</a></li>
-	<li><a href="/2016/08/">August 2016</a></li>
-	<li><a href="/2016/05/">May 2016</a></li>
-	<li><a href="/2016/04/">April 2016</a></li>
-	<li><a href="/2016/01/">January 2016</a></li>
-	<li><a href="/2015/12/">December 2015</a></li>
-	<li><a href="/2015/11/">November 2015</a></li>
-	<li><a href="/2015/10/">October 2015</a></li>
-	<li><a href="/2015/08/">August 2015</a></li>
-	<li><a href="/2015/06/">June 2015</a></li>
-	<li><a href="/2015/04/">April 2015</a></li>
-	<li><a href="/2015/01/">January 2015</a></li>
-	<li><a href="/2014/11/">November 2014</a></li>
-	<li><a href="/2014/10/">October 2014</a></li>
-	<li><a href="/2014/05/">May 2014</a></li>
-	<li><a href="/2014/03/">March 2014</a></li>
-	<li><a href="/2013/09/">September 2013</a></li>
-	<li><a href="/2012/07/">July 2012</a></li>
-	<li><a href="/2012/04/">April 2012</a></li>
-	<li><a href="/2012/01/">January 2012</a></li>
-	<li><a href="/2011/11/">November 2011</a></li>
-	<li><a href="/2011/06/">June 2011</a></li>
-	<li><a href="/2010/08/">August 2010</a></li>
-	<li><a href="/2010/05/">May 2010</a></li>
-	<li><a href="/2010/02/">February 2010</a></li>
-	<li><a href="/2010/01/">January 2010</a></li>
-	<li><a href="/2009/12/">December 2009</a></li>
-	<li><a href="/2009/10/">October 2009</a></li>
-	<li><a href="/2009/02/">February 2009</a></li>
-	<li><a href="/2008/07/">July 2008</a></li>
-	<li><a href="/2008/03/">March 2008</a></li>
-	<li><a href="/2007/04/">April 2007</a></li>
-	<li><a href="/2006/06/">June 2006</a></li>
-	<li><a href="/2006/04/">April 2006</a></li>
-	<li><a href="/2005/03/">March 2005</a></li>
-			</ul>
+                                        var el;
+                                        if ( matches( event.target, 'a.share-facebook' ) ) {
+                                                el = event.target;
+                                        } else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+                                                el = event.target.parentNode;
+                                        }
 
-			</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widgettitle"><span>Categories</span></h3>
-			<ul>
-					<li class="cat-item cat-item-28"><a href="/category/arcinfo/">ArcInfo</a>
-</li>
-	<li class="cat-item cat-item-18"><a href="/category/arcmap/">ArcMap</a>
-</li>
-	<li class="cat-item cat-item-35"><a href="/category/arcpro/">ArcPro</a>
-</li>
-	<li class="cat-item cat-item-30"><a href="/category/python/arcpy/">arcpy</a>
-</li>
-	<li class="cat-item cat-item-19"><a href="/category/cartography/">Cartography</a>
-</li>
-	<li class="cat-item cat-item-10"><a href="/category/data/">Data</a>
-</li>
-	<li class="cat-item cat-item-25"><a href="/category/gdal-ogr/">Gdal-ogr</a>
-</li>
-	<li class="cat-item cat-item-23"><a href="/category/geoprocessing/">Geoprocessing</a>
-</li>
-	<li class="cat-item cat-item-2"><a href="/category/how-to/">How-to</a>
-</li>
-	<li class="cat-item cat-item-16"><a href="/category/meta/">Meta</a>
-</li>
-	<li class="cat-item cat-item-32"><a href="/category/opinion/">Opinion</a>
-</li>
-	<li class="cat-item cat-item-29"><a href="/category/python/">Python</a>
-</li>
-	<li class="cat-item cat-item-31"><a href="/category/qgis/">Qgis</a>
-</li>
-	<li class="cat-item cat-item-26"><a href="/category/scripting/">Scripting</a>
-</li>
-	<li class="cat-item cat-item-20"><a href="/category/tip/">Tip</a>
-</li>
-	<li class="cat-item cat-item-1"><a href="/category/uncategorized/">Uncategorized</a>
-</li>
-	<li class="cat-item cat-item-27"><a href="/category/v9-x/">v9.x</a>
-</li>
-			</ul>
+                                        if ( el ) {
+                                                event.preventDefault();
 
-			</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widgettitle"><span>Meta</span></h3>
-		<ul>
-						
-			<li><a href="/feed/">Entries feed</a></li>
-			<li><a href="/comments/feed/">Comments feed</a></li>
+                                                // If there's another sharing window open, close it.
+                                                if ( typeof windowOpen !== 'undefined' ) {
+                                                        windowOpen.close();
+                                                }
+                                                windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+                                                return false;
+                                        }
+                                } );
+                        } )();
+    var windowOpen;
+                        ( function () {
+                                function matches( el, sel ) {
+                                        return !! (
+                                                el.matches && el.matches( sel ) ||
+                                                el.msMatchesSelector && el.msMatchesSelector( sel )
+                                        );
+                                }
 
-			<li><a href="https://wordpress.org/">WordPress.org</a></li>
-		</ul>
+                                document.body.addEventListener( 'click', function ( event ) {
+                                        if ( ! event.target ) {
+                                                return;
+                                        }
 
-		</aside><aside id="search-2" class="widget widget_search">
-	<form role="search" method="get" class="search-form" action="/">
-		<label>
-			<span class="screen-reader-text">Search for:</span>
-			<input type="search" class="search-field" placeholder="To search, type and hit enter &hellip;" value="" name="s">
-		</label>
-		<button type="submit" class="search-submit">
-			<span class="genericon-search"></span>
-		</button>
-	</form>
+                                        var el;
+                                        if ( matches( event.target, 'a.share-linkedin' ) ) {
+                                                el = event.target;
+                                        } else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-linkedin' ) ) {
+                                                el = event.target.parentNode;
+                                        }
 
-</aside>
-		<aside id="recent-posts-2" class="widget widget_recent_entries">
-		<h3 class="widgettitle"><span>Recent Posts</span></h3>
-		<ul>
-											<li>
-					<a href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/">Go to Juneau in 3D in a browser</a>
-									</li>
-											<li>
-					<a href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/">Using Layer &amp; Map Packages outside of ArcGIS</a>
-									</li>
-											<li>
-					<a href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/">Using spatial features from an ArcGIS online browser app in Pro</a>
-									</li>
-											<li>
-					<a href="/2021/11/07/merging-gpx-files/">Merging gpx files</a>
-									</li>
-											<li>
-					<a href="/2021/11/07/unintended-map-art/">Unintended map art</a>
-									</li>
-					</ul>
+                                        if ( el ) {
+                                                event.preventDefault();
 
-		</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widgettitle"><span>Archives</span></h3>
-			<ul>
-					<li><a href="/2021/11/">November 2021</a></li>
-	<li><a href="/2021/02/">February 2021</a></li>
-	<li><a href="/2020/12/">December 2020</a></li>
-	<li><a href="/2020/11/">November 2020</a></li>
-	<li><a href="/2019/11/">November 2019</a></li>
-	<li><a href="/2019/06/">June 2019</a></li>
-	<li><a href="/2019/05/">May 2019</a></li>
-	<li><a href="/2019/01/">January 2019</a></li>
-	<li><a href="/2018/10/">October 2018</a></li>
-	<li><a href="/2018/09/">September 2018</a></li>
-	<li><a href="/2018/08/">August 2018</a></li>
-	<li><a href="/2018/01/">January 2018</a></li>
-	<li><a href="/2017/10/">October 2017</a></li>
-	<li><a href="/2017/07/">July 2017</a></li>
-	<li><a href="/2017/06/">June 2017</a></li>
-	<li><a href="/2017/05/">May 2017</a></li>
-	<li><a href="/2017/03/">March 2017</a></li>
-	<li><a href="/2016/11/">November 2016</a></li>
-	<li><a href="/2016/08/">August 2016</a></li>
-	<li><a href="/2016/05/">May 2016</a></li>
-	<li><a href="/2016/04/">April 2016</a></li>
-	<li><a href="/2016/01/">January 2016</a></li>
-	<li><a href="/2015/12/">December 2015</a></li>
-	<li><a href="/2015/11/">November 2015</a></li>
-	<li><a href="/2015/10/">October 2015</a></li>
-	<li><a href="/2015/08/">August 2015</a></li>
-	<li><a href="/2015/06/">June 2015</a></li>
-	<li><a href="/2015/04/">April 2015</a></li>
-	<li><a href="/2015/01/">January 2015</a></li>
-	<li><a href="/2014/11/">November 2014</a></li>
-	<li><a href="/2014/10/">October 2014</a></li>
-	<li><a href="/2014/05/">May 2014</a></li>
-	<li><a href="/2014/03/">March 2014</a></li>
-	<li><a href="/2013/09/">September 2013</a></li>
-	<li><a href="/2012/07/">July 2012</a></li>
-	<li><a href="/2012/04/">April 2012</a></li>
-	<li><a href="/2012/01/">January 2012</a></li>
-	<li><a href="/2011/11/">November 2011</a></li>
-	<li><a href="/2011/06/">June 2011</a></li>
-	<li><a href="/2010/08/">August 2010</a></li>
-	<li><a href="/2010/05/">May 2010</a></li>
-	<li><a href="/2010/02/">February 2010</a></li>
-	<li><a href="/2010/01/">January 2010</a></li>
-	<li><a href="/2009/12/">December 2009</a></li>
-	<li><a href="/2009/10/">October 2009</a></li>
-	<li><a href="/2009/02/">February 2009</a></li>
-	<li><a href="/2008/07/">July 2008</a></li>
-	<li><a href="/2008/03/">March 2008</a></li>
-	<li><a href="/2007/04/">April 2007</a></li>
-	<li><a href="/2006/06/">June 2006</a></li>
-	<li><a href="/2006/04/">April 2006</a></li>
-	<li><a href="/2005/03/">March 2005</a></li>
-			</ul>
-
-			</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widgettitle"><span>Categories</span></h3>
-			<ul>
-					<li class="cat-item cat-item-28"><a href="/category/arcinfo/">ArcInfo</a>
-</li>
-	<li class="cat-item cat-item-18"><a href="/category/arcmap/">ArcMap</a>
-</li>
-	<li class="cat-item cat-item-35"><a href="/category/arcpro/">ArcPro</a>
-</li>
-	<li class="cat-item cat-item-30"><a href="/category/python/arcpy/">arcpy</a>
-</li>
-	<li class="cat-item cat-item-19"><a href="/category/cartography/">Cartography</a>
-</li>
-	<li class="cat-item cat-item-10"><a href="/category/data/">Data</a>
-</li>
-	<li class="cat-item cat-item-25"><a href="/category/gdal-ogr/">Gdal-ogr</a>
-</li>
-	<li class="cat-item cat-item-23"><a href="/category/geoprocessing/">Geoprocessing</a>
-</li>
-	<li class="cat-item cat-item-2"><a href="/category/how-to/">How-to</a>
-</li>
-	<li class="cat-item cat-item-16"><a href="/category/meta/">Meta</a>
-</li>
-	<li class="cat-item cat-item-32"><a href="/category/opinion/">Opinion</a>
-</li>
-	<li class="cat-item cat-item-29"><a href="/category/python/">Python</a>
-</li>
-	<li class="cat-item cat-item-31"><a href="/category/qgis/">Qgis</a>
-</li>
-	<li class="cat-item cat-item-26"><a href="/category/scripting/">Scripting</a>
-</li>
-	<li class="cat-item cat-item-20"><a href="/category/tip/">Tip</a>
-</li>
-	<li class="cat-item cat-item-1"><a href="/category/uncategorized/">Uncategorized</a>
-</li>
-	<li class="cat-item cat-item-27"><a href="/category/v9-x/">v9.x</a>
-</li>
-			</ul>
-
-			</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widgettitle"><span>Meta</span></h3>
-		<ul>
-						
-			<li><a href="/feed/">Entries feed</a></li>
-			<li><a href="/comments/feed/">Comments feed</a></li>
-
-			<li><a href="https://wordpress.org/">WordPress.org</a></li>
-		</ul>
-
-		</aside>
-	</section>
-	</div>
-	
-	
-	<div id="footer-bg">
-	
-				
-		<div id="footer-wrap">
-		
-			<footer id="footer" class="container clearfix" role="contentinfo">
-				
-				<span id="footer-text"></span>
-				
-				<div id="credit-link">Powered by  and <a href="https://themezee.com/themes/momentous/" title="Momentous WordPress Theme">Momentous</a>.</div>
-			
-			</footer>
-		
-		</div>
-
-	</div>
-	
-</div><!-- end #wrapper -->
-
-<script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/momentous-lite\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script>
-
-	<script type="text/javascript">
-		window.WPCOM_sharing_counts = {"\/2015\/10\/16\/rescuing-data-from-oziexplorer\/":42};
-	</script>
-				<script type="text/javascript" src="https://c0.wp.com/c/6.8.2/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
-<script type="text/javascript" id="jetpack-stats-js-before">
-/* <![CDATA[ */
-_stq = window._stq || [];
-_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"128167691\",\"post\":\"42\",\"tz\":\"-7\",\"srv\":\"www.yukongis.ca\",\"j\":\"1:14.9.1\"}") ]);
-_stq.push([ "clickTrackerInit", "128167691", "42" ]);
-/* ]]> */
-</script>
-
-
-
-<script type="text/javascript" id="sharing-js-js-extra">
-/* <![CDATA[ */
-var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
-/* ]]> */
-</script>
-
-<script type="text/javascript" id="sharing-js-js-after">
-/* <![CDATA[ */
-var windowOpen;
-			( function () {
-				function matches( el, sel ) {
-					return !! (
-						el.matches && el.matches( sel ) ||
-						el.msMatchesSelector && el.msMatchesSelector( sel )
-					);
-				}
-
-				document.body.addEventListener( 'click', function ( event ) {
-					if ( ! event.target ) {
-						return;
-					}
-
-					var el;
-					if ( matches( event.target, 'a.share-twitter' ) ) {
-						el = event.target;
-					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
-						el = event.target.parentNode;
-					}
-
-					if ( el ) {
-						event.preventDefault();
-
-						// If there's another sharing window open, close it.
-						if ( typeof windowOpen !== 'undefined' ) {
-							windowOpen.close();
-						}
-						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
-						return false;
-					}
-				} );
-			} )();
-var windowOpen;
-			( function () {
-				function matches( el, sel ) {
-					return !! (
-						el.matches && el.matches( sel ) ||
-						el.msMatchesSelector && el.msMatchesSelector( sel )
-					);
-				}
-
-				document.body.addEventListener( 'click', function ( event ) {
-					if ( ! event.target ) {
-						return;
-					}
-
-					var el;
-					if ( matches( event.target, 'a.share-facebook' ) ) {
-						el = event.target;
-					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
-						el = event.target.parentNode;
-					}
-
-					if ( el ) {
-						event.preventDefault();
-
-						// If there's another sharing window open, close it.
-						if ( typeof windowOpen !== 'undefined' ) {
-							windowOpen.close();
-						}
-						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
-						return false;
-					}
-				} );
-			} )();
-var windowOpen;
-			( function () {
-				function matches( el, sel ) {
-					return !! (
-						el.matches && el.matches( sel ) ||
-						el.msMatchesSelector && el.msMatchesSelector( sel )
-					);
-				}
-
-				document.body.addEventListener( 'click', function ( event ) {
-					if ( ! event.target ) {
-						return;
-					}
-
-					var el;
-					if ( matches( event.target, 'a.share-linkedin' ) ) {
-						el = event.target;
-					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-linkedin' ) ) {
-						el = event.target.parentNode;
-					}
-
-					if ( el ) {
-						event.preventDefault();
-
-						// If there's another sharing window open, close it.
-						if ( typeof windowOpen !== 'undefined' ) {
-							windowOpen.close();
-						}
-						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
-						return false;
-					}
-				} );
-			} )();
-/* ]]> */
-</script>
-	<iframe src="https://widgets.wp.com/likes/master.html?ver=20250902#ver=20250902" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
-	<div id="likes-other-gravatars" role="dialog" aria-hidden="true" tabindex="-1"><div class="likes-text"><span>%d</span></div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
-	</body>
-</html><!-- Dynamic page generated in 0.590 seconds. --><!-- Cached page generated by WP-Super-Cache on 2025-09-02 01:19:56 -->
-
-
-
-
-
-
-
-
-
-
-
-
+                                                // If there's another sharing window open, close it.
+                                                if ( typeof windowOpen !== 'undefined' ) {
+                                                        windowOpen.close();
+                                                }
+                                                windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+                                                return false;
+                                        }
+                                } );
+                        } )();
+    /* ]]> */
+    </script> <iframe src="https://widgets.wp.com/likes/master.html?ver=20250902#ver=20250902" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+    <div id="likes-other-gravatars" role="dialog" aria-hidden="true" tabindex="-1">
+      <div class="likes-text">
+        <span>%d</span>
+      </div>
+      <ul class="wpl-avatars sd-like-gravatars"></ul>
+    </div><!-- Dynamic page generated in 0.590 seconds. --><!-- Cached page generated by WP-Super-Cache on 2025-09-02 01:19:56 -->
+  </body>
+</html>

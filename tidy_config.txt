@@ -1,3 +1,0 @@
-quiet: yes
-indent: auto
-wrap: 0
