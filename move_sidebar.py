@@ -67,11 +67,8 @@ def move_sidebar_after_content(html_content: str) -> str:
     # Remove unwanted script elements from entire document
     unwanted_scripts = []
 
-    # Find jetpack-* scripts
-    jetpack_scripts = soup.find_all('script', id=lambda x: x and x.startswith('jetpack-'))
-    unwanted_scripts.extend(jetpack_scripts)
-
     # Find sharing-js* scripts
+
     sharing_scripts = soup.find_all('script', id=lambda x: x and x.startswith('sharing-js'))
     unwanted_scripts.extend(sharing_scripts)
 
@@ -86,6 +83,12 @@ def move_sidebar_after_content(html_content: str) -> str:
     scripts_removed = len(unwanted_scripts)
     for script in unwanted_scripts:
         script.decompose()
+
+    # Remove any tag with jetpack-* ID
+    jetpack_tags = soup.find_all(id=lambda x: x and x.startswith('jetpack-'))
+    jetpack_tags_removed = len(jetpack_tags)
+    for tag in jetpack_tags:
+        tag.decompose()
 
     # Remove iframe with likes-master ID
     likes_iframe = soup.find('iframe', id='likes-master')
@@ -156,14 +159,13 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
         duplicate_count = 0
         unwanted_count = 0
         scripts_count = 0
+        jetpack_tags_count = 0
         iframe_count = 0
         divs_count = 0
         unwanted_ids = {'search-2', 'meta-2'}
 
         # Count unwanted scripts
         unwanted_scripts_check = []
-        jetpack_scripts = soup_check.find_all('script', id=lambda x: x and x.startswith('jetpack-'))
-        unwanted_scripts_check.extend(jetpack_scripts)
         sharing_scripts = soup_check.find_all('script', id=lambda x: x and x.startswith('sharing-js'))
         unwanted_scripts_check.extend(sharing_scripts)
         comment_scripts = soup_check.find_all('script', id=lambda x: x and x.startswith('comment-reply'))
@@ -171,6 +173,10 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
         speculation_scripts = soup_check.find_all('script', type='speculationrules')
         unwanted_scripts_check.extend(speculation_scripts)
         scripts_count = len(unwanted_scripts_check)
+
+        # Count jetpack tags
+        jetpack_tags = soup_check.find_all(id=lambda x: x and x.startswith('jetpack-'))
+        jetpack_tags_count = len(jetpack_tags)
 
         # Count iframe
         likes_iframe = soup_check.find('iframe', id='likes-master')
@@ -204,6 +210,8 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
                 messages.append(f"would remove {duplicate_count} duplicate aside IDs")
             if scripts_count > 0:
                 messages.append(f"would remove {scripts_count} unwanted scripts")
+            if jetpack_tags_count > 0:
+                messages.append(f"would remove {jetpack_tags_count} jetpack tags")
             if iframe_count > 0:
                 messages.append(f"would remove {iframe_count} likes iframe")
             if divs_count > 0:
@@ -226,6 +234,8 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
             messages.append(f"removed {duplicate_count} duplicate aside IDs")
         if scripts_count > 0:
             messages.append(f"removed {scripts_count} unwanted scripts")
+        if jetpack_tags_count > 0:
+            messages.append(f"removed {jetpack_tags_count} jetpack tags")
         if iframe_count > 0:
             messages.append(f"removed {iframe_count} likes iframe")
         if divs_count > 0:
