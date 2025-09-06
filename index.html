@@ -1,877 +1,2112 @@
-<!DOCTYPE html>
-<!-- HTML 5 --><html lang="en-US">
-<head>
-<meta content="HTML Tidy for HTML5 for Linux version 5.8.0" name="generator"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link href="http://gmpg.org/xfn/11" rel="profile"/>
-<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
-<style>
-      img:is([sizes="auto" i], [sizes^="auto," i]) {
-        contain-intrinsic-size: 3000px 1500px;
-      }
-    </style><!-- Jetpack Site Verification Tags -->
-<meta content="google9711d833ce6b14e4" name="google-site-verification"/><!-- This site is optimized with the Yoast SEO plugin v25.8 - https://yoast.com/wordpress/plugins/seo/ -->
-<title>
-      Yukon GIS « geospatial tidbits for and from the Yukon
-    </title>
-<meta content="geospatial tidbits for and from the Yukon" name="description"/>
-<link href="/" rel="canonical"/>
-<link href="/page/2/" rel="next"/>
-<meta content="en_US" property="og:locale"/>
-<meta content="website" property="og:type"/>
-<meta content="Yukon GIS" property="og:title"/>
-<meta content="geospatial tidbits for and from the Yukon" property="og:description"/>
-<meta content="/" property="og:url"/>
-<meta content="Yukon GIS" property="og:site_name"/>
-<meta content="summary_large_image" name="twitter:card"/><!-- / Yoast SEO plugin. -->
-<link href="//secure.gravatar.com" rel="dns-prefetch"/>
-<link href="//stats.wp.com" rel="dns-prefetch"/>
-<link href="//v0.wordpress.com" rel="dns-prefetch"/>
-<link href="//widgets.wp.com" rel="dns-prefetch"/>
-<link href="//s0.wp.com" rel="dns-prefetch"/>
-<link href="//0.gravatar.com" rel="dns-prefetch"/>
-<link href="//1.gravatar.com" rel="dns-prefetch"/>
-<link href="//2.gravatar.com" rel="dns-prefetch"/>
-<link href="//i0.wp.com" rel="preconnect"/>
-<link href="//c0.wp.com" rel="preconnect"/>
-<script type="text/javascript">
-      /* <![CDATA[ */
-      window._wpemojiSettings = {
-        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/",
-        ext: ".png",
-        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/",
-        svgExt: ".svg",
-        source: {
-          concatemoji: "\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2",
-        },
-      };
-      /*! This file is auto-generated */
-      !(function (s, n) {
-        var o, i, e;
-        function c(e) {
-          try {
-            var t = { supportTests: e, timestamp: new Date().valueOf() };
-            sessionStorage.setItem(o, JSON.stringify(t));
-          } catch (e) {}
-        }
-        function p(e, t, n) {
-          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
-            e.fillText(t, 0, 0);
-          var t = new Uint32Array(
-              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
-            ),
-            a =
-              (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
-              e.fillText(n, 0, 0),
-              new Uint32Array(
-                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
-              ));
-          return t.every(function (e, t) {
-            return e === a[t];
-          });
-        }
-        function u(e, t) {
-          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
-            e.fillText(t, 0, 0);
-          for (
-            var n = e.getImageData(16, 16, 1, 1), a = 0;
-            a < n.data.length;
-            a++
-          )
-            if (0 !== n.data[a]) return !1;
-          return !0;
-        }
-        function f(e, t, n, a) {
-          switch (t) {
-            case "flag":
-              return n(
-                e,
-                "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f",
-                "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f"
-              )
-                ? !1
-                : !n(
-                    e,
-                    "\ud83c\udde8\ud83c\uddf6",
-                    "\ud83c\udde8\u200b\ud83c\uddf6"
-                  ) &&
-                    !n(
-                      e,
-                      "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
-                      "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
-                    );
-            case "emoji":
-              return !a(e, "\ud83e\udedf");
-          }
-          return !1;
-        }
-        function g(e, t, n, a) {
-          var r =
-              "undefined" != typeof WorkerGlobalScope &&
-              self instanceof WorkerGlobalScope
-                ? new OffscreenCanvas(300, 150)
-                : s.createElement("canvas"),
-            o = r.getContext("2d", { willReadFrequently: !0 }),
-            i = ((o.textBaseline = "top"), (o.font = "600 32px Arial"), {});
-          return (
-            e.forEach(function (e) {
-              i[e] = t(o, e, n, a);
-            }),
-            i
-          );
-        }
-        function t(e) {
-          var t = s.createElement("script");
-          (t.src = e), (t.defer = !0), s.head.appendChild(t);
-        }
-        "undefined" != typeof Promise &&
-          ((o = "wpEmojiSettingsSupports"),
-          (i = ["flag", "emoji"]),
-          (n.supports = { everything: !0, everythingExceptFlag: !0 }),
-          (e = new Promise(function (e) {
-            s.addEventListener("DOMContentLoaded", e, { once: !0 });
-          })),
-          new Promise(function (t) {
-            var n = (function () {
-              try {
-                var e = JSON.parse(sessionStorage.getItem(o));
-                if (
-                  "object" == typeof e &&
-                  "number" == typeof e.timestamp &&
-                  new Date().valueOf() < e.timestamp + 604800 &&
-                  "object" == typeof e.supportTests
-                )
-                  return e.supportTests;
-              } catch (e) {}
-              return null;
-            })();
-            if (!n) {
-              if (
-                "undefined" != typeof Worker &&
-                "undefined" != typeof OffscreenCanvas &&
-                "undefined" != typeof URL &&
-                URL.createObjectURL &&
-                "undefined" != typeof Blob
-              )
-                try {
-                  var e =
-                      "postMessage(" +
-                      g.toString() +
-                      "(" +
-                      [
-                        JSON.stringify(i),
-                        f.toString(),
-                        p.toString(),
-                        u.toString(),
-                      ].join(",") +
-                      "));",
-                    a = new Blob([e], { type: "text/javascript" }),
-                    r = new Worker(URL.createObjectURL(a), {
-                      name: "wpTestEmojiSupports",
-                    });
-                  return void (r.onmessage = function (e) {
-                    c((n = e.data)), r.terminate(), t(n);
-                  });
-                } catch (e) {}
-              c((n = g(i, f, p, u)));
+<!doctype html>
+<!-- HTML 5 -->
+<html lang="en-US">
+    <head>
+        <meta
+            content="HTML Tidy for HTML5 for Linux version 5.8.0"
+            name="generator"
+        />
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link href="http://gmpg.org/xfn/11" rel="profile" />
+        <meta
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+            name="robots"
+        />
+        <style>
+            img:is([sizes="auto" i], [sizes^="auto," i]) {
+                contain-intrinsic-size: 3000px 1500px;
             }
-            t(n);
-          })
-            .then(function (e) {
-              for (var t in e)
-                (n.supports[t] = e[t]),
-                  (n.supports.everything =
-                    n.supports.everything && n.supports[t]),
-                  "flag" !== t &&
-                    (n.supports.everythingExceptFlag =
-                      n.supports.everythingExceptFlag && n.supports[t]);
-              (n.supports.everythingExceptFlag =
-                n.supports.everythingExceptFlag && !n.supports.flag),
-                (n.DOMReady = !1),
-                (n.readyCallback = function () {
-                  n.DOMReady = !0;
-                });
-            })
-            .then(function () {
-              return e;
-            })
-            .then(function () {
-              var e;
-              n.supports.everything ||
-                (n.readyCallback(),
-                (e = n.source || {}).concatemoji
-                  ? t(e.concatemoji)
-                  : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
-            }));
-      })((window, document), window._wpemojiSettings);
-      /* ]]> */
-    </script>
-<link href="/wp-content/themes/momentous-lite/css/custom-fonts.css?ver=20180413" id="momentous-custom-fonts-css" media="all" rel="stylesheet" type="text/css"/>
-<style id="wp-emoji-styles-inline-css" type="text/css">
-      img.wp-smiley,
-      img.emoji {
-        display: inline !important;
-        border: none !important;
-        box-shadow: none !important;
-        height: 1em !important;
-        width: 1em !important;
-        margin: 0 0.07em !important;
-        vertical-align: -0.1em !important;
-        background: none !important;
-        padding: 0 !important;
-      }
-    </style>
-<link href="https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css" id="mediaelement-css" media="all" rel="stylesheet" type="text/css"/>
-<link href="https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/wp-mediaelement.min.css" id="wp-mediaelement-css" media="all" rel="stylesheet" type="text/css"/>
-<style id="jetpack-sharing-buttons-style-inline-css" type="text/css">
-      .jetpack-sharing-buttons__services-list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 0;
-        list-style-type: none;
-        margin: 5px;
-        padding: 0;
-      }
-      .jetpack-sharing-buttons__services-list.has-small-icon-size {
-        font-size: 12px;
-      }
-      .jetpack-sharing-buttons__services-list.has-normal-icon-size {
-        font-size: 16px;
-      }
-      .jetpack-sharing-buttons__services-list.has-large-icon-size {
-        font-size: 24px;
-      }
-      .jetpack-sharing-buttons__services-list.has-huge-icon-size {
-        font-size: 36px;
-      }
-      @media print {
-        .jetpack-sharing-buttons__services-list {
-          display: none !important;
-        }
-      }
-      .editor-styles-wrapper .wp-block-jetpack-sharing-buttons {
-        gap: 0;
-        padding-inline-start: 0;
-      }
-      ul.jetpack-sharing-buttons__services-list.has-background {
-        padding: 1.25em 2.375em;
-      }
-    </style>
-<link href="/wp-content/themes/momentous-lite/style.css?ver=1.4.5" id="momentous-lite-stylesheet-css" media="all" rel="stylesheet" type="text/css"/>
-<link href="https://c0.wp.com/p/jetpack/14.9.1/_inc/genericons/genericons/genericons.css" id="genericons-css" media="all" rel="stylesheet" type="text/css"/>
-<link href="https://c0.wp.com/p/jetpack/14.9.1/modules/likes/style.css" id="jetpack_likes-css" media="all" rel="stylesheet" type="text/css"/><!--[if lt IE 9]>
-      <script
-        type="text/javascript"
-        src="/wp-content/themes/momentous-lite/js/html5shiv.min.js?ver=3.7.3"
-        id="html5shiv-js"
-      ></script>
-    <![endif]-->
-<script id="jquery-core-js" src="https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery.min.js" type="text/javascript"></script>
-<script id="jquery-migrate-js" src="https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery-migrate.min.js" type="text/javascript"></script>
-<script id="momentous-lite-jquery-navigation-js" src="/wp-content/themes/momentous-lite/js/navigation.js?ver=20160719" type="text/javascript"></script>
-<script id="imagesloaded-js" src="https://c0.wp.com/c/6.8.2/wp-includes/js/imagesloaded.min.js" type="text/javascript"></script>
-<script id="masonry-js" src="https://c0.wp.com/c/6.8.2/wp-includes/js/masonry.min.js" type="text/javascript"></script>
-<script id="momentous-lite-masonry-js" src="/wp-content/themes/momentous-lite/js/masonry-init.js?ver=20160719" type="text/javascript"></script>
-<link href="/wp-json/" rel="https://api.w.org/"/>
-<link href="/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
-<link href="https://wp.me/8FMgP" rel="shortlink"/>
-<style>
-      img#wpstats {
-        display: none;
-      }
-    </style>
-<style type="text/css">
-      .recentcomments a {
-        display: inline !important;
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-    </style>
-<style id="custom-background-css" type="text/css">
-      body.custom-background {
-        background-color: #6b7a6b;
-      }
-    </style>
-<style id="wp-custom-css" type="text/css">
-      .type-post,
-      aside,
-      .post-pagination {
-        border-radius: 0.25em;
-      }
-      .more-link {
-        border-radius: 0.2em;
-      }
-      code {
-        padding: inherit;
-      }
-      #wrapper::before {
-        content: "";
-      }
-      #wrapper::after {
-        content: "";
-      }
-    </style>
-</head>
-<body class="home blog custom-background wp-theme-momentous-lite">
-<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-<div class="hfeed" id="wrapper">
-<div id="header-wrap">
-<div id="header-search-wrap">
-<div class="container clearfix" id="header-search">
-<form action="/" class="search-form" method="get" role="search">
-<label><span class="screen-reader-text">Search for:</span> <input class="search-field" name="s" placeholder="To search, type and hit enter …" type="search" value=""/></label>
-</form>
-</div>
-</div>
-<header class="container clearfix" id="header" role="banner">
-<div id="logo">
-<h1 class="site-title">
-<a href="/" rel="home">Yukon GIS</a>
-</h1>
-<p class="site-description">
-              geospatial tidbits for and from the Yukon
-            </p>
-</div>
-<div class="clearfix" id="header-content">
-<div class="header-search-icon"></div>
-</div>
-</header>
-<div id="navigation-wrap">
-<div class="container clearfix" id="navigation">
-<nav class="clearfix" id="mainnav" role="navigation">
-<ul class="main-navigation-menu menu" id="mainnav-menu">
-<li class="page_item page-item-106">
-<a href="/about/">About</a>
-</li>
-<li class="page_item page-item-152">
-<a href="/recent-changes/">Recent Changes</a>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="container clearfix" id="wrap">
-<section class="primary" id="content" role="main">
-<div class="post-wrapper clearfix" id="post-wrapper">
-<div class="post-wrap clearfix">
-<article class="post-555 post type-post status-publish format-standard has-post-thumbnail hentry category-data tag-lidar" id="post-555">
-<a href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/" rel="bookmark"><img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" data-attachment-id="556" data-comments-opened="1" data-image-caption="" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Juneau-lidar-potree" data-large-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?fit=860%2C656&amp;ssl=1" data-medium-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?fit=595%2C454&amp;ssl=1" data-orig-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?fit=1257%2C959&amp;ssl=1" data-orig-size="1257,959" data-permalink="/2021/11/19/go-to-juneau-in-3d-in-a-browser/juneau-lidar-potree/" decoding="async" fetchpriority="high" height="300" sizes="(max-width: 900px) 100vw, 900px" src="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?resize=900%2C300&amp;ssl=1" srcset="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?resize=900%2C300&amp;ssl=1 900w, https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?resize=480%2C160&amp;ssl=1 480w" width="900"/></a>
-<h2 class="entry-title post-title">
-<a href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/" rel="bookmark">Go to Juneau in 3D in a browser</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/" rel="bookmark" title="10:54 pm"><time class="entry-date published updated" datetime="2021-11-19T22:54:39-07:00">2021-Nov-19</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    Viewing lidar point clouds in a browser is several years old now. Still, I find myself stopping in awe when I encounter it again. It’s […]
-                  </p><a class="more-link" href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/#respond">0</a>
-</div><span class="meta-category"><a href="/category/data/" rel="category tag">Data</a></span>
-</div>
-</article>
-</div>
-<div class="post-wrap clearfix">
-<article class="post-548 post type-post status-publish format-standard hentry category-how-to" id="post-548">
-<a href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/" rel="bookmark"></a>
-<h2 class="entry-title post-title">
-<a href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/" rel="bookmark">Using Layer &amp; Map Packages outside of ArcGIS</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/" rel="bookmark" title="7:41 pm"><time class="entry-date published updated" datetime="2021-11-15T19:41:48-07:00">2021-Nov-15</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    How to use ArcGIS Desktop layer and map packages if you don’t have ArcGIS? Hopeful Find someone with ArcMap/Pro to use Feature Class to Shapefile […]
-                  </p><a class="more-link" href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/#respond">0</a>
-</div><span class="meta-category"><a href="/category/how-to/" rel="category tag">How-to</a></span>
-</div>
-</article>
-</div>
-<div class="post-wrap clearfix">
-<article class="post-537 post type-post status-publish format-standard hentry category-arcpro category-how-to" id="post-537">
-<a href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/" rel="bookmark"></a>
-<h2 class="entry-title post-title">
-<a href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/" rel="bookmark">Using spatial features from an ArcGIS online browser app in Pro</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/" rel="bookmark" title="10:50 am"><time class="entry-date published updated" datetime="2021-11-07T10:50:35-07:00">2021-Nov-07</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    I figured out that the layers in an ArcGIS Online browser app can be added to ArcGIS Pro by using “Add Data &gt;&gt; From Path” […]
-                  </p><a class="more-link" href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/#respond">0</a>
-</div><span class="meta-category"><a href="/category/arcpro/" rel="category tag">ArcPro</a>, <a href="/category/how-to/" rel="category tag">How-to</a></span>
-</div>
-</article>
-</div>
-<div class="post-wrap clearfix">
-<article class="post-530 post type-post status-publish format-standard hentry category-gdal-ogr category-how-to tag-gps" id="post-530">
-<a href="/2021/11/07/merging-gpx-files/" rel="bookmark"></a>
-<h2 class="entry-title post-title">
-<a href="/2021/11/07/merging-gpx-files/" rel="bookmark">Merging gpx files</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2021/11/07/merging-gpx-files/" rel="bookmark" title="4:55 am"><time class="entry-date published updated" datetime="2021-11-07T04:55:05-07:00">2021-Nov-07</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    Objective: collect all GPS waypoints and tracks for the Tombstone hikes on YukonHiking.ca into a single map. (Prep: download the GPX files. Thank them for […]
-                  </p><a class="more-link" href="/2021/11/07/merging-gpx-files/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2021/11/07/merging-gpx-files/#respond">0</a>
-</div><span class="meta-category"><a href="/category/gdal-ogr/" rel="category tag">Gdal-ogr</a>, <a href="/category/how-to/" rel="category tag">How-to</a></span>
-</div>
-</article>
-</div>
-<div class="post-wrap clearfix">
-<article class="post-524 post type-post status-publish format-standard has-post-thumbnail hentry category-cartography tag-art" id="post-524">
-<a href="/2021/11/07/unintended-map-art/" rel="bookmark"><img alt="hi res detail, cropped" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" data-attachment-id="527" data-comments-opened="1" data-image-caption="" data-image-description="" data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}' data-image-title="Unintended detail cropped" data-large-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Unintended_2021-07-29_detail_640px.png?fit=644%2C644&amp;ssl=1" data-medium-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Unintended_2021-07-29_detail_640px.png?fit=595%2C595&amp;ssl=1" data-orig-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Unintended_2021-07-29_detail_640px.png?fit=644%2C644&amp;ssl=1" data-orig-size="644,644" data-permalink="/2021/11/07/unintended-map-art/unintended_2021-07-29_detail_640px/" decoding="async" height="300" src="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Unintended_2021-07-29_detail_640px.png?resize=644%2C300&amp;ssl=1" width="644"/></a>
-<h2 class="entry-title post-title">
-<a href="/2021/11/07/unintended-map-art/" rel="bookmark">Unintended map art</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2021/11/07/unintended-map-art/" rel="bookmark" title="3:56 am"><time class="entry-date published updated" datetime="2021-11-07T03:56:32-07:00">2021-Nov-07</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    Useless for it’s intended purpose but somehow interesting in it’s own right, maybe even beautiful. You’re looking at the outlines of 474 satellite images drawn […]
-                  </p><a class="more-link" href="/2021/11/07/unintended-map-art/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2021/11/07/unintended-map-art/#respond">0</a>
-</div><span class="meta-category"><a href="/category/cartography/" rel="category tag">Cartography</a></span>
-</div>
-</article>
-</div>
-<div class="post-wrap clearfix">
-<article class="post-516 post type-post status-publish format-standard hentry category-data category-gdal-ogr category-tip" id="post-516">
-<a href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/" rel="bookmark"></a>
-<h2 class="entry-title post-title">
-<a href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/" rel="bookmark">Add a nodata mask to a read-only image?</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/" rel="bookmark" title="4:54 pm"><time class="entry-date published updated" datetime="2021-02-19T16:54:22-07:00">2021-Feb-19</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    I finally came up with a solution to the problem of how to deal with missing or inappropriate nodata in imagery that we can’t change […]
-                  </p><a class="more-link" href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/#respond">0</a>
-</div><span class="meta-category"><a href="/category/data/" rel="category tag">Data</a>, <a href="/category/gdal-ogr/" rel="category tag">Gdal-ogr</a>, <a href="/category/tip/" rel="category tag">Tip</a></span>
-</div>
-</article>
-</div>
-<div class="post-wrap clearfix">
-<article class="post-512 post type-post status-publish format-standard hentry category-opinion" id="post-512">
-<a href="/2020/12/05/goodbye-arcmap/" rel="bookmark"></a>
-<h2 class="entry-title post-title">
-<a href="/2020/12/05/goodbye-arcmap/" rel="bookmark">Goodbye ArcMap</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2020/12/05/goodbye-arcmap/" rel="bookmark" title="8:06 pm"><time class="entry-date published updated" datetime="2020-12-05T20:06:28-07:00">2020-Dec-05</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    my largest reservoir of sadness is held for those technicians and analysts and developers that, at each iteration, choose to opt out
-                  </p><a class="more-link" href="/2020/12/05/goodbye-arcmap/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2020/12/05/goodbye-arcmap/#comments">2</a>
-</div><span class="meta-category"><a href="/category/opinion/" rel="category tag">Opinion</a></span>
-</div>
-</article>
-</div>
-<div class="post-wrap clearfix">
-<article class="post-507 post type-post status-publish format-standard hentry category-data" id="post-507">
-<a href="/2020/11/12/yukon-nts-index/" rel="bookmark"></a>
-<h2 class="entry-title post-title">
-<a href="/2020/11/12/yukon-nts-index/" rel="bookmark">Yukon NTS Index</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2020/11/12/yukon-nts-index/" rel="bookmark" title="9:34 pm"><time class="entry-date published updated" datetime="2020-11-12T21:34:52-07:00">2020-Nov-12</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    A commonly used dataset that’s not readily for available for download in ways I find useful is the Canadian National Topographic Series index for the […]
-                  </p><a class="more-link" href="/2020/11/12/yukon-nts-index/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2020/11/12/yukon-nts-index/#respond">0</a>
-</div><span class="meta-category"><a href="/category/data/" rel="category tag">Data</a></span>
-</div>
-</article>
-</div>
-<div class="post-wrap clearfix">
-<article class="post-494 post type-post status-publish format-standard hentry category-arcmap category-tip tag-coord-sys" id="post-494">
-<a href="/2019/11/12/a-map-is-worth-____-of-words/" rel="bookmark"></a>
-<h2 class="entry-title post-title">
-<a href="/2019/11/12/a-map-is-worth-____-of-words/" rel="bookmark">A map is worth ____ of words</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2019/11/12/a-map-is-worth-____-of-words/" rel="bookmark" title="7:35 pm"><time class="entry-date published updated" datetime="2019-11-12T19:35:09-08:00">2019-Nov-12</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    Sooner than later, every GIS user in the territory will need to convert spatial data into our standard Yukon Albers projection and be presented with a dialog that has no less than 17 choices and wonder “What is the right choice??”.
-                  </p><a class="more-link" href="/2019/11/12/a-map-is-worth-____-of-words/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2019/11/12/a-map-is-worth-____-of-words/#respond">0</a>
-</div><span class="meta-category"><a href="/category/arcmap/" rel="category tag">ArcMap</a>, <a href="/category/tip/" rel="category tag">Tip</a></span>
-</div>
-</article>
-</div>
-<div class="post-wrap clearfix">
-<article class="post-475 post type-post status-publish format-standard hentry category-opinion category-tip" id="post-475">
-<a href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/" rel="bookmark"></a>
-<h2 class="entry-title post-title">
-<a href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/" rel="bookmark">Always ask for the source files, not just the final product</a>
-</h2>
-<div class="entry-meta postmeta clearfix">
-<span class="meta-date">Posted on <a href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/" rel="bookmark" title="12:30 pm"><time class="entry-date published updated" datetime="2019-06-25T12:30:03-07:00">2019-Jun-25</time></a></span> <span class="meta-author">by <span class="author vcard"><a class="url fn n" href="/author/yukongis_uugozu/" rel="author" title="View all posts by matt">matt</a></span></span>
-</div>
-<div class="entry clearfix">
-<p>
-                    I’ve been asked to make a map of the final admin plan for Dàadzàii Vàn (Summit-Bell) Territorial Park for Cabinet submission. So an important map […]
-                  </p><a class="more-link" href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/">Continue reading »</a>
-</div>
-<div class="postinfo clearfix">
-<div class="meta-comments">
-<a href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/#comments">1</a>
-</div><span class="meta-category"><a href="/category/opinion/" rel="category tag">Opinion</a>, <a href="/category/tip/" rel="category tag">Tip</a></span>
-</div>
-</article>
-</div>
-</div>
-<div class="post-pagination clearfix">
-<span aria-current="page" class="page-numbers current">1</span> <a class="page-numbers" href="/page/2/">2</a> <a class="page-numbers" href="/page/3/">3</a> <span class="page-numbers dots">…</span> <a class="page-numbers" href="/page/7/">7</a> <a class="next page-numbers" href="/page/2/">»</a>
-</div>
-</section><section class="secondary clearfix" id="sidebar" role="complementary">
-<aside class="widget widget_recent_entries">
-<h3 class="widget-title">
-              Recent Posts
-            </h3>
-<ul>
-<li>
-<a href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/">Go to Juneau in 3D in a browser</a>
-</li>
-<li>
-<a href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/">Using Layer &amp; Map Packages outside of ArcGIS</a>
-</li>
-<li>
-<a href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/">Using spatial features from an ArcGIS online browser app in Pro</a>
-</li>
-<li>
-<a href="/2021/11/07/merging-gpx-files/">Merging gpx files</a>
-</li>
-<li>
-<a href="/2021/11/07/unintended-map-art/">Unintended map art</a>
-</li>
-</ul>
-</aside>
-<aside class="widget widget_archive">
-<h3 class="widget-title">
-              Archives
-            </h3>
-<ul>
-<li>
-<a href="/2021/">2021</a>
-</li>
-<li>
-<a href="/2020/">2020</a>
-</li>
-<li>
-<a href="/2019/">2019</a>
-</li>
-<li>
-<a href="/2018/">2018</a>
-</li>
-<li>
-<a href="/2017/">2017</a>
-</li>
-</ul>
-</aside>
-<aside class="widget widget_categories">
-<h3 class="widget-title">
-              Categories
-            </h3>
-<ul>
-<li>
-<a href="/category/data/">Data</a>
-</li>
-<li>
-<a href="/category/how-to/">How-to</a>
-</li>
-<li>
-<a href="/category/arcpro/">ArcPro</a>
-</li>
-<li>
-<a href="/category/gdal-ogr/">Gdal-ogr</a>
-</li>
-<li>
-<a href="/category/cartography/">Cartography</a>
-</li>
-<li>
-<a href="/category/tip/">Tip</a>
-</li>
-<li>
-<a href="/category/opinion/">Opinion</a>
-</li>
-<li>
-<a href="/category/arcmap/">ArcMap</a>
-</li>
-</ul>
-</aside>
-</section>
-</div>
-<div id="footer-bg">
-<div id="footer-wrap">
-<footer class="container clearfix" id="footer" role="contentinfo">
-<span id="footer-text"></span>
-<div id="credit-link">
-              Powered by and <a href="https://themezee.com/themes/momentous/" title="Momentous WordPress Theme">Momentous</a>.
-            </div>
-</footer>
-</div>
-</div>
-</div><!-- end #wrapper -->
-<script type="speculationrules">
-      {
-        "prefetch": [
-          {
-            "source": "document",
-            "where": {
-              "and": [
-                { "href_matches": "\/*" },
-                {
-                  "not": {
-                    "href_matches": [
-                      "\/wp-*.php",
-                      "\/wp-admin\/*",
-                      "\/wp-content\/uploads\/*",
-                      "\/wp-content\/*",
-                      "\/wp-content\/plugins\/*",
-                      "\/wp-content\/themes\/momentous-lite\/*",
-                      "\/*\\?(.+)"
-                    ]
-                  }
+        </style>
+        <!-- Jetpack Site Verification Tags -->
+        <meta
+            content="google9711d833ce6b14e4"
+            name="google-site-verification"
+        />
+        <!-- This site is optimized with the Yoast SEO plugin v25.8 - https://yoast.com/wordpress/plugins/seo/ -->
+        <title>Yukon GIS « geospatial tidbits for and from the Yukon</title>
+        <meta
+            content="geospatial tidbits for and from the Yukon"
+            name="description"
+        />
+        <link href="/" rel="canonical" />
+        <link href="/page/2/" rel="next" />
+        <meta content="en_US" property="og:locale" />
+        <meta content="website" property="og:type" />
+        <meta content="Yukon GIS" property="og:title" />
+        <meta
+            content="geospatial tidbits for and from the Yukon"
+            property="og:description"
+        />
+        <meta content="/" property="og:url" />
+        <meta content="Yukon GIS" property="og:site_name" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <!-- / Yoast SEO plugin. -->
+        <link href="//secure.gravatar.com" rel="dns-prefetch" />
+        <link href="//stats.wp.com" rel="dns-prefetch" />
+        <link href="//v0.wordpress.com" rel="dns-prefetch" />
+        <link href="//widgets.wp.com" rel="dns-prefetch" />
+        <link href="//s0.wp.com" rel="dns-prefetch" />
+        <link href="//0.gravatar.com" rel="dns-prefetch" />
+        <link href="//1.gravatar.com" rel="dns-prefetch" />
+        <link href="//2.gravatar.com" rel="dns-prefetch" />
+        <link href="//i0.wp.com" rel="preconnect" />
+        <link href="//c0.wp.com" rel="preconnect" />
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            window._wpemojiSettings = {
+                baseUrl:
+                    "https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/",
+                ext: ".png",
+                svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/",
+                svgExt: ".svg",
+                source: {
+                    concatemoji:
+                        "\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2",
                 },
-                { "not": { "selector_matches": "a[rel~=\"nofollow\"]" } },
-                {
-                  "not": { "selector_matches": ".no-prefetch, .no-prefetch a" }
+            };
+            /*! This file is auto-generated */
+            !(function (s, n) {
+                var o, i, e;
+                function c(e) {
+                    try {
+                        var t = {
+                            supportTests: e,
+                            timestamp: new Date().valueOf(),
+                        };
+                        sessionStorage.setItem(o, JSON.stringify(t));
+                    } catch (e) {}
                 }
-              ]
-            },
-            "eagerness": "conservative"
-          }
-        ]
-      }
-    </script>
-<div id="jp-carousel-loading-overlay">
-<div id="jp-carousel-loading-wrapper">
-<span id="jp-carousel-library-loading"> </span>
-</div>
-</div>
-<div class="jp-carousel-overlay" style="display: none">
-<div class="jp-carousel-container">
-<!-- The Carousel Swiper -->
-<div class="jp-carousel-wrap swiper jp-carousel-swiper-container jp-carousel-transitions" itemscope="" itemtype="https://schema.org/ImageGallery">
-<div class="jp-carousel swiper-wrapper"></div>
-<div class="jp-swiper-button-prev swiper-button-prev">
-<svg fill="none" height="24" viewbox="0 0 25 24" width="25" xmlns="http://www.w3.org/2000/svg">
-<mask height="12" id="maskPrev" mask-type="alpha" maskunits="userSpaceOnUse" width="9" x="8" y="6">
-<path d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z" fill="white"></path>
-</mask>
-<g mask="url(#maskPrev)">
-<rect fill="#FFFFFF" height="24" width="23.8823" x="0.579102"></rect>
-</g></svg>
-</div>
-<div class="jp-swiper-button-next swiper-button-next">
-<svg fill="none" height="24" viewbox="0 0 25 24" width="25" xmlns="http://www.w3.org/2000/svg">
-<mask height="12" id="maskNext" mask-type="alpha" maskunits="userSpaceOnUse" width="8" x="8" y="6">
-<path d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z" fill="white"></path>
-</mask>
-<g mask="url(#maskNext)">
-<rect fill="#FFFFFF" height="24" width="23.8822" x="0.34375"></rect>
-</g></svg>
-</div>
-</div><!-- The main close buton -->
-<div class="jp-carousel-close-hint">
-<svg fill="none" height="24" viewbox="0 0 25 24" width="25" xmlns="http://www.w3.org/2000/svg">
-<mask height="14" id="maskClose" mask-type="alpha" maskunits="userSpaceOnUse" width="15" x="5" y="5">
-<path d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z" fill="white"></path>
-</mask>
-<g mask="url(#maskClose)">
-<rect fill="#FFFFFF" height="24" width="23.8823" x="0.409668"></rect>
-</g></svg>
-</div><!-- Image info, comments and meta -->
-<div class="jp-carousel-info">
-<div class="jp-carousel-info-footer">
-<div class="jp-carousel-pagination-container">
-<div class="jp-swiper-pagination swiper-pagination"></div>
-<div class="jp-carousel-pagination"></div>
-</div>
-<div class="jp-carousel-photo-title-container">
-<h2 class="jp-carousel-photo-caption"></h2>
-</div>
-<div class="jp-carousel-photo-icons-container">
-<a aria-label="Toggle photo metadata visibility" class="jp-carousel-icon-btn jp-carousel-icon-info" href="#"><span class="jp-carousel-icon"><svg fill="none" height="24" viewbox="0 0 25 24" width="25" xmlns="http://www.w3.org/2000/svg">
-<mask height="20" id="maskInfo" mask-type="alpha" maskunits="userSpaceOnUse" width="21" x="2" y="2">
-<path clip-rule="evenodd" d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z" fill="white" fill-rule="evenodd"></path>
-</mask>
-<g mask="url(#maskInfo)">
-<rect fill="#FFFFFF" height="24" width="23.8823" x="0.8125"></rect>
-</g></svg></span></a> <a aria-label="Toggle photo comments visibility" class="jp-carousel-icon-btn jp-carousel-icon-comments" href="#"><span class="jp-carousel-icon"><svg fill="none" height="24" viewbox="0 0 25 24" width="25" xmlns="http://www.w3.org/2000/svg">
-<mask height="20" id="maskComments" mask-type="alpha" maskunits="userSpaceOnUse" width="21" x="2" y="2">
-<path clip-rule="evenodd" d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z" fill="white" fill-rule="evenodd"></path>
-</mask>
-<g mask="url(#maskComments)">
-<rect fill="#FFFFFF" height="24" width="23.8823" x="0.34668"></rect>
-</g></svg> </span></a>
-</div>
-</div>
-<div class="jp-carousel-info-extra">
-<div class="jp-carousel-info-content-wrapper">
-<div class="jp-carousel-photo-title-container">
-<h2 class="jp-carousel-photo-title"></h2>
-</div>
-<div class="jp-carousel-comments-wrapper">
-<div id="jp-carousel-comments-loading">
-<span>Loading Comments...</span>
-</div>
-<div class="jp-carousel-comments"></div>
-<div id="jp-carousel-comment-form-container">
-<span id="jp-carousel-comment-form-spinner"> </span>
-<div id="jp-carousel-comment-post-results"></div>
-<form id="jp-carousel-comment-form" name="jp-carousel-comment-form">
-<label class="screen-reader-text" for="jp-carousel-comment-form-comment-field">Write a Comment...</label>
-<textarea class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea" id="jp-carousel-comment-form-comment-field" name="comment" placeholder="Write a Comment..."></textarea>
-<div id="jp-carousel-comment-form-submit-and-info-wrapper">
-<div id="jp-carousel-comment-form-commenting-as">
-<fieldset>
-<label for="jp-carousel-comment-form-email-field">Email (Required)</label> <input class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field" name="email" type="text"/>
-</fieldset>
-<fieldset>
-<label for="jp-carousel-comment-form-author-field">Name (Required)</label> <input class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field" name="author" type="text"/>
-</fieldset>
-<fieldset>
-<label for="jp-carousel-comment-form-url-field">Website</label> <input class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field" name="url" type="text"/>
-</fieldset>
-</div><input class="jp-carousel-comment-form-button" id="jp-carousel-comment-form-button-submit" name="submit" type="submit" value="Post Comment"/>
-</div>
-</form>
-</div>
-</div>
-<div class="jp-carousel-image-meta">
-<div class="jp-carousel-title-and-caption">
-<div class="jp-carousel-photo-info">
-<h3 class="jp-carousel-caption" itemprop="caption description"></h3>
-</div>
-<div class="jp-carousel-photo-description"></div>
-</div>
-<ul class="jp-carousel-image-exif" style="display: none"></ul><a class="jp-carousel-image-download" href="#" style="display: none" target="_blank"><svg fill="none" height="24" viewbox="0 0 25 24" width="25" xmlns="http://www.w3.org/2000/svg">
-<mask height="18" id="mask0" mask-type="alpha" maskunits="userSpaceOnUse" width="19" x="3" y="3">
-<path clip-rule="evenodd" d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z" fill="white" fill-rule="evenodd"></path>
-</mask>
-<g mask="url(#mask0)">
-<rect fill="#FFFFFF" height="24" width="23.8823" x="0.870605"></rect>
-</g></svg></a>
-<div class="jp-carousel-image-map" style="display: none"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<link href="https://c0.wp.com/p/jetpack/14.9.1/_inc/blocks/swiper.css" id="jetpack-swiper-library-css" media="all" rel="stylesheet" type="text/css"/>
-<link href="https://c0.wp.com/p/jetpack/14.9.1/modules/carousel/jetpack-carousel.css" id="jetpack-carousel-css" media="all" rel="stylesheet" type="text/css"/>
-<script id="jetpack-stats-js-before" type="text/javascript">
-      /* <![CDATA[ */
-      _stq = window._stq || [];
-      _stq.push([
-        "view",
-        JSON.parse(
-          '{"v":"ext","blog":"128167691","post":"0","tz":"-7","srv":"www.yukongis.ca","arch_home":"1","j":"1:14.9.1"}'
-        ),
-      ]);
-      _stq.push(["clickTrackerInit", "128167691", "0"]);
-      /* ]]> */
-    </script>
-<script id="jetpack-carousel-js-extra" type="text/javascript">
-
-      /* <![CDATA[ */
-      var jetpackSwiperLibraryPath = {
-        url: "\/wp-content\/plugins\/jetpack\/_inc\/blocks\/swiper.js",
-      };
-      var jetpackCarouselStrings = {
-        widths: [370, 700, 1000, 1200, 1400, 2000],
-        is_logged_in: "",
-        lang: "en",
-        ajaxurl: "\/wp-admin\/admin-ajax.php",
-        nonce: "4885f63184",
-        display_exif: "1",
-        display_comments: "1",
-        single_image_gallery: "1",
-        single_image_gallery_media_file: "",
-        background_color: "black",
-        comment: "Comment",
-        post_comment: "Post Comment",
-        write_comment: "Write a Comment...",
-        loading_comments: "Loading Comments...",
-        image_label: "Open image in full-screen.",
-        download_original:
-          'View full size <span class="photo-size">{0}<span class="photo-size-times">\u00d7<\/span>{1}<\/span>',
-        no_comment_text:
-          "Please be sure to submit some text with your comment.",
-        no_comment_email: "Please provide an email address to comment.",
-        no_comment_author: "Please provide your name to comment.",
-        comment_post_error:
-          "Sorry, but there was an error posting your comment. Please try again later.",
-        comment_approved: "Your comment was approved.",
-        comment_unapproved: "Your comment is in moderation.",
-        camera: "Camera",
-        aperture: "Aperture",
-        shutter_speed: "Shutter Speed",
-        focal_length: "Focal Length",
-        copyright: "Copyright",
-        comment_registration: "0",
-        require_name_email: "1",
-        login_url:
-          "\/wp-login.php?redirect_to=%2F2021%2F11%2F19%2Fgo-to-juneau-in-3d-in-a-browser%2F",
-        blog_id: "1",
-        meta_data: [
-          "camera",
-          "aperture",
-          "shutter_speed",
-          "focal_length",
-          "copyright",
-        ],
-      };
-      /* ]]> */
-    </script><!-- Dynamic page generated in 0.586 seconds. --><!-- Cached page generated by WP-Super-Cache on 2025-09-02 01:18:09 -->
-</body>
+                function p(e, t, n) {
+                    (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                        e.fillText(t, 0, 0));
+                    var t = new Uint32Array(
+                            e.getImageData(
+                                0,
+                                0,
+                                e.canvas.width,
+                                e.canvas.height,
+                            ).data,
+                        ),
+                        a =
+                            (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                            e.fillText(n, 0, 0),
+                            new Uint32Array(
+                                e.getImageData(
+                                    0,
+                                    0,
+                                    e.canvas.width,
+                                    e.canvas.height,
+                                ).data,
+                            ));
+                    return t.every(function (e, t) {
+                        return e === a[t];
+                    });
+                }
+                function u(e, t) {
+                    (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+                        e.fillText(t, 0, 0));
+                    for (
+                        var n = e.getImageData(16, 16, 1, 1), a = 0;
+                        a < n.data.length;
+                        a++
+                    )
+                        if (0 !== n.data[a]) return !1;
+                    return !0;
+                }
+                function f(e, t, n, a) {
+                    switch (t) {
+                        case "flag":
+                            return n(
+                                e,
+                                "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f",
+                                "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f",
+                            )
+                                ? !1
+                                : !n(
+                                      e,
+                                      "\ud83c\udde8\ud83c\uddf6",
+                                      "\ud83c\udde8\u200b\ud83c\uddf6",
+                                  ) &&
+                                      !n(
+                                          e,
+                                          "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+                                          "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f",
+                                      );
+                        case "emoji":
+                            return !a(e, "\ud83e\udedf");
+                    }
+                    return !1;
+                }
+                function g(e, t, n, a) {
+                    var r =
+                            "undefined" != typeof WorkerGlobalScope &&
+                            self instanceof WorkerGlobalScope
+                                ? new OffscreenCanvas(300, 150)
+                                : s.createElement("canvas"),
+                        o = r.getContext("2d", { willReadFrequently: !0 }),
+                        i =
+                            ((o.textBaseline = "top"),
+                            (o.font = "600 32px Arial"),
+                            {});
+                    return (
+                        e.forEach(function (e) {
+                            i[e] = t(o, e, n, a);
+                        }),
+                        i
+                    );
+                }
+                function t(e) {
+                    var t = s.createElement("script");
+                    ((t.src = e), (t.defer = !0), s.head.appendChild(t));
+                }
+                "undefined" != typeof Promise &&
+                    ((o = "wpEmojiSettingsSupports"),
+                    (i = ["flag", "emoji"]),
+                    (n.supports = { everything: !0, everythingExceptFlag: !0 }),
+                    (e = new Promise(function (e) {
+                        s.addEventListener("DOMContentLoaded", e, { once: !0 });
+                    })),
+                    new Promise(function (t) {
+                        var n = (function () {
+                            try {
+                                var e = JSON.parse(sessionStorage.getItem(o));
+                                if (
+                                    "object" == typeof e &&
+                                    "number" == typeof e.timestamp &&
+                                    new Date().valueOf() <
+                                        e.timestamp + 604800 &&
+                                    "object" == typeof e.supportTests
+                                )
+                                    return e.supportTests;
+                            } catch (e) {}
+                            return null;
+                        })();
+                        if (!n) {
+                            if (
+                                "undefined" != typeof Worker &&
+                                "undefined" != typeof OffscreenCanvas &&
+                                "undefined" != typeof URL &&
+                                URL.createObjectURL &&
+                                "undefined" != typeof Blob
+                            )
+                                try {
+                                    var e =
+                                            "postMessage(" +
+                                            g.toString() +
+                                            "(" +
+                                            [
+                                                JSON.stringify(i),
+                                                f.toString(),
+                                                p.toString(),
+                                                u.toString(),
+                                            ].join(",") +
+                                            "));",
+                                        a = new Blob([e], {
+                                            type: "text/javascript",
+                                        }),
+                                        r = new Worker(URL.createObjectURL(a), {
+                                            name: "wpTestEmojiSupports",
+                                        });
+                                    return void (r.onmessage = function (e) {
+                                        (c((n = e.data)), r.terminate(), t(n));
+                                    });
+                                } catch (e) {}
+                            c((n = g(i, f, p, u)));
+                        }
+                        t(n);
+                    })
+                        .then(function (e) {
+                            for (var t in e)
+                                ((n.supports[t] = e[t]),
+                                    (n.supports.everything =
+                                        n.supports.everything && n.supports[t]),
+                                    "flag" !== t &&
+                                        (n.supports.everythingExceptFlag =
+                                            n.supports.everythingExceptFlag &&
+                                            n.supports[t]));
+                            ((n.supports.everythingExceptFlag =
+                                n.supports.everythingExceptFlag &&
+                                !n.supports.flag),
+                                (n.DOMReady = !1),
+                                (n.readyCallback = function () {
+                                    n.DOMReady = !0;
+                                }));
+                        })
+                        .then(function () {
+                            return e;
+                        })
+                        .then(function () {
+                            var e;
+                            n.supports.everything ||
+                                (n.readyCallback(),
+                                (e = n.source || {}).concatemoji
+                                    ? t(e.concatemoji)
+                                    : e.wpemoji &&
+                                      e.twemoji &&
+                                      (t(e.twemoji), t(e.wpemoji)));
+                        }));
+            })((window, document), window._wpemojiSettings);
+            /* ]]> */
+        </script>
+        <link
+            href="/wp-content/themes/momentous-lite/css/custom-fonts.css?ver=20180413"
+            id="momentous-custom-fonts-css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <style id="wp-emoji-styles-inline-css" type="text/css">
+            img.wp-smiley,
+            img.emoji {
+                display: inline !important;
+                border: none !important;
+                box-shadow: none !important;
+                height: 1em !important;
+                width: 1em !important;
+                margin: 0 0.07em !important;
+                vertical-align: -0.1em !important;
+                background: none !important;
+                padding: 0 !important;
+            }
+        </style>
+        <link
+            href="https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css"
+            id="mediaelement-css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://c0.wp.com/c/6.8.2/wp-includes/js/mediaelement/wp-mediaelement.min.css"
+            id="wp-mediaelement-css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <style id="jetpack-sharing-buttons-style-inline-css" type="text/css">
+            .jetpack-sharing-buttons__services-list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0;
+                list-style-type: none;
+                margin: 5px;
+                padding: 0;
+            }
+            .jetpack-sharing-buttons__services-list.has-small-icon-size {
+                font-size: 12px;
+            }
+            .jetpack-sharing-buttons__services-list.has-normal-icon-size {
+                font-size: 16px;
+            }
+            .jetpack-sharing-buttons__services-list.has-large-icon-size {
+                font-size: 24px;
+            }
+            .jetpack-sharing-buttons__services-list.has-huge-icon-size {
+                font-size: 36px;
+            }
+            @media print {
+                .jetpack-sharing-buttons__services-list {
+                    display: none !important;
+                }
+            }
+            .editor-styles-wrapper .wp-block-jetpack-sharing-buttons {
+                gap: 0;
+                padding-inline-start: 0;
+            }
+            ul.jetpack-sharing-buttons__services-list.has-background {
+                padding: 1.25em 2.375em;
+            }
+        </style>
+        <link
+            href="/wp-content/themes/momentous-lite/style.css?ver=1.4.5"
+            id="momentous-lite-stylesheet-css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://c0.wp.com/p/jetpack/14.9.1/_inc/genericons/genericons/genericons.css"
+            id="genericons-css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://c0.wp.com/p/jetpack/14.9.1/modules/likes/style.css"
+            id="jetpack_likes-css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <!--[if lt IE 9]>
+            <script
+                type="text/javascript"
+                src="/wp-content/themes/momentous-lite/js/html5shiv.min.js?ver=3.7.3"
+                id="html5shiv-js"
+            ></script>
+        <![endif]-->
+        <script
+            id="jquery-core-js"
+            src="https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery.min.js"
+            type="text/javascript"
+        ></script>
+        <script
+            id="jquery-migrate-js"
+            src="https://c0.wp.com/c/6.8.2/wp-includes/js/jquery/jquery-migrate.min.js"
+            type="text/javascript"
+        ></script>
+        <script
+            id="momentous-lite-jquery-navigation-js"
+            src="/wp-content/themes/momentous-lite/js/navigation.js?ver=20160719"
+            type="text/javascript"
+        ></script>
+        <script
+            id="imagesloaded-js"
+            src="https://c0.wp.com/c/6.8.2/wp-includes/js/imagesloaded.min.js"
+            type="text/javascript"
+        ></script>
+        <script
+            id="masonry-js"
+            src="https://c0.wp.com/c/6.8.2/wp-includes/js/masonry.min.js"
+            type="text/javascript"
+        ></script>
+        <script
+            id="momentous-lite-masonry-js"
+            src="/wp-content/themes/momentous-lite/js/masonry-init.js?ver=20160719"
+            type="text/javascript"
+        ></script>
+        <link href="/wp-json/" rel="https://api.w.org/" />
+        <link
+            href="/xmlrpc.php?rsd"
+            rel="EditURI"
+            title="RSD"
+            type="application/rsd+xml"
+        />
+        <link href="https://wp.me/8FMgP" rel="shortlink" />
+        <style>
+            img#wpstats {
+                display: none;
+            }
+        </style>
+        <style type="text/css">
+            .recentcomments a {
+                display: inline !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        </style>
+        <style id="custom-background-css" type="text/css">
+            body.custom-background {
+                background-color: #6b7a6b;
+            }
+        </style>
+        <style id="wp-custom-css" type="text/css">
+            .type-post,
+            aside,
+            .post-pagination {
+                border-radius: 0.25em;
+            }
+            .more-link {
+                border-radius: 0.2em;
+            }
+            code {
+                padding: inherit;
+            }
+            #wrapper::before {
+                content: "";
+            }
+            #wrapper::after {
+                content: "";
+            }
+        </style>
+    </head>
+    <body class="home blog custom-background wp-theme-momentous-lite">
+        <a class="skip-link screen-reader-text" href="#content"
+            >Skip to content</a
+        >
+        <div class="hfeed" id="wrapper">
+            <div id="header-wrap">
+                <div id="header-search-wrap">
+                    <div class="container clearfix" id="header-search">
+                        <form
+                            action="/"
+                            class="search-form"
+                            method="get"
+                            role="search"
+                        >
+                            <label
+                                ><span class="screen-reader-text"
+                                    >Search for:</span
+                                >
+                                <input
+                                    class="search-field"
+                                    name="s"
+                                    placeholder="To search, type and hit enter …"
+                                    type="search"
+                                    value=""
+                            /></label>
+                        </form>
+                    </div>
+                </div>
+                <header class="container clearfix" id="header" role="banner">
+                    <div id="logo">
+                        <h1 class="site-title">
+                            <a href="/" rel="home">Yukon GIS</a>
+                        </h1>
+                        <p class="site-description">
+                            geospatial tidbits for and from the Yukon
+                        </p>
+                    </div>
+                    <div class="clearfix" id="header-content">
+                        <div class="header-search-icon"></div>
+                    </div>
+                </header>
+                <div id="navigation-wrap">
+                    <div class="container clearfix" id="navigation">
+                        <nav class="clearfix" id="mainnav" role="navigation">
+                            <ul
+                                class="main-navigation-menu menu"
+                                id="mainnav-menu"
+                            >
+                                <li class="page_item page-item-106">
+                                    <a href="/about/">About</a>
+                                </li>
+                                <li class="page_item page-item-152">
+                                    <a href="/recent-changes/"
+                                        >Recent Changes</a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="container clearfix" id="wrap">
+                <section class="primary" id="content" role="main">
+                    <div class="post-wrapper clearfix" id="post-wrapper">
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-555 post type-post status-publish format-standard has-post-thumbnail hentry category-data tag-lidar"
+                                id="post-555"
+                            >
+                                <a
+                                    href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/"
+                                    rel="bookmark"
+                                    ><img
+                                        alt=""
+                                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
+                                        data-attachment-id="556"
+                                        data-comments-opened="1"
+                                        data-image-caption=""
+                                        data-image-description=""
+                                        data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
+                                        data-image-title="Juneau-lidar-potree"
+                                        data-large-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?fit=860%2C656&amp;ssl=1"
+                                        data-medium-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?fit=595%2C454&amp;ssl=1"
+                                        data-orig-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?fit=1257%2C959&amp;ssl=1"
+                                        data-orig-size="1257,959"
+                                        data-permalink="/2021/11/19/go-to-juneau-in-3d-in-a-browser/juneau-lidar-potree/"
+                                        decoding="async"
+                                        fetchpriority="high"
+                                        height="300"
+                                        sizes="(max-width: 900px) 100vw, 900px"
+                                        src="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?resize=900%2C300&amp;ssl=1"
+                                        srcset="
+                                            https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?resize=900%2C300&amp;ssl=1 900w,
+                                            https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Juneau-lidar-potree.png?resize=480%2C160&amp;ssl=1 480w
+                                        "
+                                        width="900"
+                                /></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/"
+                                        rel="bookmark"
+                                        >Go to Juneau in 3D in a browser</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/"
+                                            rel="bookmark"
+                                            title="10:54 pm"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2021-11-19T22:54:39-07:00"
+                                                >2021-Nov-19</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        Viewing lidar point clouds in a browser
+                                        is several years old now. Still, I find
+                                        myself stopping in awe when I encounter
+                                        it again. It’s […]
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/#respond"
+                                            >0</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/data/"
+                                            rel="category tag"
+                                            >Data</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-548 post type-post status-publish format-standard hentry category-how-to"
+                                id="post-548"
+                            >
+                                <a
+                                    href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/"
+                                    rel="bookmark"
+                                ></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/"
+                                        rel="bookmark"
+                                        >Using Layer &amp; Map Packages outside
+                                        of ArcGIS</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/"
+                                            rel="bookmark"
+                                            title="7:41 pm"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2021-11-15T19:41:48-07:00"
+                                                >2021-Nov-15</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        How to use ArcGIS Desktop layer and map
+                                        packages if you don’t have ArcGIS?
+                                        Hopeful Find someone with ArcMap/Pro to
+                                        use Feature Class to Shapefile […]
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/#respond"
+                                            >0</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/how-to/"
+                                            rel="category tag"
+                                            >How-to</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-537 post type-post status-publish format-standard hentry category-arcpro category-how-to"
+                                id="post-537"
+                            >
+                                <a
+                                    href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/"
+                                    rel="bookmark"
+                                ></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/"
+                                        rel="bookmark"
+                                        >Using spatial features from an ArcGIS
+                                        online browser app in Pro</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/"
+                                            rel="bookmark"
+                                            title="10:50 am"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2021-11-07T10:50:35-07:00"
+                                                >2021-Nov-07</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        I figured out that the layers in an
+                                        ArcGIS Online browser app can be added
+                                        to ArcGIS Pro by using “Add Data
+                                        &gt;&gt; From Path” […]
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/#respond"
+                                            >0</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/arcpro/"
+                                            rel="category tag"
+                                            >ArcPro</a
+                                        >,
+                                        <a
+                                            href="/category/how-to/"
+                                            rel="category tag"
+                                            >How-to</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-530 post type-post status-publish format-standard hentry category-gdal-ogr category-how-to tag-gps"
+                                id="post-530"
+                            >
+                                <a
+                                    href="/2021/11/07/merging-gpx-files/"
+                                    rel="bookmark"
+                                ></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2021/11/07/merging-gpx-files/"
+                                        rel="bookmark"
+                                        >Merging gpx files</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2021/11/07/merging-gpx-files/"
+                                            rel="bookmark"
+                                            title="4:55 am"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2021-11-07T04:55:05-07:00"
+                                                >2021-Nov-07</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        Objective: collect all GPS waypoints and
+                                        tracks for the Tombstone hikes on
+                                        YukonHiking.ca into a single map. (Prep:
+                                        download the GPX files. Thank them for
+                                        […]
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2021/11/07/merging-gpx-files/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2021/11/07/merging-gpx-files/#respond"
+                                            >0</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/gdal-ogr/"
+                                            rel="category tag"
+                                            >Gdal-ogr</a
+                                        >,
+                                        <a
+                                            href="/category/how-to/"
+                                            rel="category tag"
+                                            >How-to</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-524 post type-post status-publish format-standard has-post-thumbnail hentry category-cartography tag-art"
+                                id="post-524"
+                            >
+                                <a
+                                    href="/2021/11/07/unintended-map-art/"
+                                    rel="bookmark"
+                                    ><img
+                                        alt="hi res detail, cropped"
+                                        class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
+                                        data-attachment-id="527"
+                                        data-comments-opened="1"
+                                        data-image-caption=""
+                                        data-image-description=""
+                                        data-image-meta='{"aperture":"0","credit":"","camera":"","caption":"","created_timestamp":"0","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0"}'
+                                        data-image-title="Unintended detail cropped"
+                                        data-large-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Unintended_2021-07-29_detail_640px.png?fit=644%2C644&amp;ssl=1"
+                                        data-medium-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Unintended_2021-07-29_detail_640px.png?fit=595%2C595&amp;ssl=1"
+                                        data-orig-file="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Unintended_2021-07-29_detail_640px.png?fit=644%2C644&amp;ssl=1"
+                                        data-orig-size="644,644"
+                                        data-permalink="/2021/11/07/unintended-map-art/unintended_2021-07-29_detail_640px/"
+                                        decoding="async"
+                                        height="300"
+                                        src="https://i0.wp.com/www.yukongis.ca/wp-content/uploads/2021/11/Unintended_2021-07-29_detail_640px.png?resize=644%2C300&amp;ssl=1"
+                                        width="644"
+                                /></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2021/11/07/unintended-map-art/"
+                                        rel="bookmark"
+                                        >Unintended map art</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2021/11/07/unintended-map-art/"
+                                            rel="bookmark"
+                                            title="3:56 am"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2021-11-07T03:56:32-07:00"
+                                                >2021-Nov-07</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        Useless for it’s intended purpose but
+                                        somehow interesting in it’s own right,
+                                        maybe even beautiful. You’re looking at
+                                        the outlines of 474 satellite images
+                                        drawn […]
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2021/11/07/unintended-map-art/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2021/11/07/unintended-map-art/#respond"
+                                            >0</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/cartography/"
+                                            rel="category tag"
+                                            >Cartography</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-516 post type-post status-publish format-standard hentry category-data category-gdal-ogr category-tip"
+                                id="post-516"
+                            >
+                                <a
+                                    href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/"
+                                    rel="bookmark"
+                                ></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/"
+                                        rel="bookmark"
+                                        >Add a nodata mask to a read-only
+                                        image?</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/"
+                                            rel="bookmark"
+                                            title="4:54 pm"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2021-02-19T16:54:22-07:00"
+                                                >2021-Feb-19</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        I finally came up with a solution to the
+                                        problem of how to deal with missing or
+                                        inappropriate nodata in imagery that we
+                                        can’t change […]
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2021/02/19/add-a-nodata-mask-to-a-read-only-image/#respond"
+                                            >0</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/data/"
+                                            rel="category tag"
+                                            >Data</a
+                                        >,
+                                        <a
+                                            href="/category/gdal-ogr/"
+                                            rel="category tag"
+                                            >Gdal-ogr</a
+                                        >,
+                                        <a
+                                            href="/category/tip/"
+                                            rel="category tag"
+                                            >Tip</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-512 post type-post status-publish format-standard hentry category-opinion"
+                                id="post-512"
+                            >
+                                <a
+                                    href="/2020/12/05/goodbye-arcmap/"
+                                    rel="bookmark"
+                                ></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2020/12/05/goodbye-arcmap/"
+                                        rel="bookmark"
+                                        >Goodbye ArcMap</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2020/12/05/goodbye-arcmap/"
+                                            rel="bookmark"
+                                            title="8:06 pm"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2020-12-05T20:06:28-07:00"
+                                                >2020-Dec-05</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        my largest reservoir of sadness is held
+                                        for those technicians and analysts and
+                                        developers that, at each iteration,
+                                        choose to opt out
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2020/12/05/goodbye-arcmap/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2020/12/05/goodbye-arcmap/#comments"
+                                            >2</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/opinion/"
+                                            rel="category tag"
+                                            >Opinion</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-507 post type-post status-publish format-standard hentry category-data"
+                                id="post-507"
+                            >
+                                <a
+                                    href="/2020/11/12/yukon-nts-index/"
+                                    rel="bookmark"
+                                ></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2020/11/12/yukon-nts-index/"
+                                        rel="bookmark"
+                                        >Yukon NTS Index</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2020/11/12/yukon-nts-index/"
+                                            rel="bookmark"
+                                            title="9:34 pm"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2020-11-12T21:34:52-07:00"
+                                                >2020-Nov-12</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        A commonly used dataset that’s not
+                                        readily for available for download in
+                                        ways I find useful is the Canadian
+                                        National Topographic Series index for
+                                        the […]
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2020/11/12/yukon-nts-index/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2020/11/12/yukon-nts-index/#respond"
+                                            >0</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/data/"
+                                            rel="category tag"
+                                            >Data</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-494 post type-post status-publish format-standard hentry category-arcmap category-tip tag-coord-sys"
+                                id="post-494"
+                            >
+                                <a
+                                    href="/2019/11/12/a-map-is-worth-____-of-words/"
+                                    rel="bookmark"
+                                ></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2019/11/12/a-map-is-worth-____-of-words/"
+                                        rel="bookmark"
+                                        >A map is worth ____ of words</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2019/11/12/a-map-is-worth-____-of-words/"
+                                            rel="bookmark"
+                                            title="7:35 pm"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2019-11-12T19:35:09-08:00"
+                                                >2019-Nov-12</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        Sooner than later, every GIS user in the
+                                        territory will need to convert spatial
+                                        data into our standard Yukon Albers
+                                        projection and be presented with a
+                                        dialog that has no less than 17 choices
+                                        and wonder “What is the right choice??”.
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2019/11/12/a-map-is-worth-____-of-words/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2019/11/12/a-map-is-worth-____-of-words/#respond"
+                                            >0</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/arcmap/"
+                                            rel="category tag"
+                                            >ArcMap</a
+                                        >,
+                                        <a
+                                            href="/category/tip/"
+                                            rel="category tag"
+                                            >Tip</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <div class="post-wrap clearfix">
+                            <article
+                                class="post-475 post type-post status-publish format-standard hentry category-opinion category-tip"
+                                id="post-475"
+                            >
+                                <a
+                                    href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/"
+                                    rel="bookmark"
+                                ></a>
+                                <h2 class="entry-title post-title">
+                                    <a
+                                        href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/"
+                                        rel="bookmark"
+                                        >Always ask for the source files, not
+                                        just the final product</a
+                                    >
+                                </h2>
+                                <div class="entry-meta postmeta clearfix">
+                                    <span class="meta-date"
+                                        >Posted on
+                                        <a
+                                            href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/"
+                                            rel="bookmark"
+                                            title="12:30 pm"
+                                            ><time
+                                                class="entry-date published updated"
+                                                datetime="2019-06-25T12:30:03-07:00"
+                                                >2019-Jun-25</time
+                                            ></a
+                                        ></span
+                                    >
+                                    <span class="meta-author"
+                                        >by
+                                        <span class="author vcard"
+                                            ><a
+                                                class="url fn n"
+                                                href="/author/yukongis_uugozu/"
+                                                rel="author"
+                                                title="View all posts by matt"
+                                                >matt</a
+                                            ></span
+                                        ></span
+                                    >
+                                </div>
+                                <div class="entry clearfix">
+                                    <p>
+                                        I’ve been asked to make a map of the
+                                        final admin plan for Dàadzàii Vàn
+                                        (Summit-Bell) Territorial Park for
+                                        Cabinet submission. So an important map
+                                        […]
+                                    </p>
+                                    <a
+                                        class="more-link"
+                                        href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/"
+                                        >Continue reading »</a
+                                    >
+                                </div>
+                                <div class="postinfo clearfix">
+                                    <div class="meta-comments">
+                                        <a
+                                            href="/2019/06/25/always-ask-for-the-source-files-not-just-the-final-product/#comments"
+                                            >1</a
+                                        >
+                                    </div>
+                                    <span class="meta-category"
+                                        ><a
+                                            href="/category/opinion/"
+                                            rel="category tag"
+                                            >Opinion</a
+                                        >,
+                                        <a
+                                            href="/category/tip/"
+                                            rel="category tag"
+                                            >Tip</a
+                                        ></span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="post-pagination clearfix">
+                        <span aria-current="page" class="page-numbers current"
+                            >1</span
+                        >
+                        <a class="page-numbers" href="/page/2/">2</a>
+                        <a class="page-numbers" href="/page/3/">3</a>
+                        <span class="page-numbers dots">…</span>
+                        <a class="page-numbers" href="/page/7/">7</a>
+                        <a class="next page-numbers" href="/page/2/">»</a>
+                    </div>
+                </section>
+                <section
+                    class="secondary clearfix"
+                    id="sidebar"
+                    role="complementary"
+                >
+                    <aside class="widget widget_search" id="search-2">
+                        <form
+                            action="/"
+                            class="search-form"
+                            method="get"
+                            role="search"
+                        >
+                            <label
+                                ><span class="screen-reader-text"
+                                    >Search for:</span
+                                >
+                                <input
+                                    class="search-field"
+                                    name="s"
+                                    placeholder="To search, type and hit enter …"
+                                    type="search"
+                                    value=""
+                            /></label>
+                        </form>
+                    </aside>
+                    <aside
+                        class="widget widget_recent_entries"
+                        id="recent-posts-2"
+                    >
+                        <h3 class="widgettitle">
+                            <span>Recent Posts</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a
+                                    href="/2021/11/19/go-to-juneau-in-3d-in-a-browser/"
+                                    >Go to Juneau in 3D in a browser</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/2021/11/15/using-layer-map-packages-outside-of-arcgis/"
+                                    >Using Layer &amp; Map Packages outside of
+                                    ArcGIS</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/2021/11/07/using-spatial-features-from-an-arcgis-online-browser-app-in-pro/"
+                                    >Using spatial features from an ArcGIS
+                                    online browser app in Pro</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/2021/11/07/merging-gpx-files/"
+                                    >Merging gpx files</a
+                                >
+                            </li>
+                            <li>
+                                <a href="/2021/11/07/unintended-map-art/"
+                                    >Unintended map art</a
+                                >
+                            </li>
+                        </ul>
+                    </aside>
+                    <aside class="widget widget_archive" id="archives-2">
+                        <h3 class="widgettitle">
+                            <span>Archives</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="/2021/11/">November 2021</a>
+                            </li>
+                            <li>
+                                <a href="/2021/02/">February 2021</a>
+                            </li>
+                            <li>
+                                <a href="/2020/12/">December 2020</a>
+                            </li>
+                            <li>
+                                <a href="/2020/11/">November 2020</a>
+                            </li>
+                            <li>
+                                <a href="/2019/11/">November 2019</a>
+                            </li>
+                            <li>
+                                <a href="/2019/06/">June 2019</a>
+                            </li>
+                            <li>
+                                <a href="/2019/05/">May 2019</a>
+                            </li>
+                            <li>
+                                <a href="/2019/01/">January 2019</a>
+                            </li>
+                            <li>
+                                <a href="/2018/10/">October 2018</a>
+                            </li>
+                            <li>
+                                <a href="/2018/09/">September 2018</a>
+                            </li>
+                            <li>
+                                <a href="/2018/08/">August 2018</a>
+                            </li>
+                            <li>
+                                <a href="/2018/01/">January 2018</a>
+                            </li>
+                            <li>
+                                <a href="/2017/10/">October 2017</a>
+                            </li>
+                            <li>
+                                <a href="/2017/07/">July 2017</a>
+                            </li>
+                            <li>
+                                <a href="/2017/06/">June 2017</a>
+                            </li>
+                            <li>
+                                <a href="/2017/05/">May 2017</a>
+                            </li>
+                            <li>
+                                <a href="/2017/03/">March 2017</a>
+                            </li>
+                            <li>
+                                <a href="/2016/11/">November 2016</a>
+                            </li>
+                            <li>
+                                <a href="/2016/08/">August 2016</a>
+                            </li>
+                            <li>
+                                <a href="/2016/05/">May 2016</a>
+                            </li>
+                            <li>
+                                <a href="/2016/04/">April 2016</a>
+                            </li>
+                            <li>
+                                <a href="/2016/01/">January 2016</a>
+                            </li>
+                            <li>
+                                <a href="/2015/12/">December 2015</a>
+                            </li>
+                            <li>
+                                <a href="/2015/11/">November 2015</a>
+                            </li>
+                            <li>
+                                <a href="/2015/10/">October 2015</a>
+                            </li>
+                            <li>
+                                <a href="/2015/08/">August 2015</a>
+                            </li>
+                            <li>
+                                <a href="/2015/06/">June 2015</a>
+                            </li>
+                            <li>
+                                <a href="/2015/04/">April 2015</a>
+                            </li>
+                            <li>
+                                <a href="/2015/01/">January 2015</a>
+                            </li>
+                            <li>
+                                <a href="/2014/11/">November 2014</a>
+                            </li>
+                            <li>
+                                <a href="/2014/10/">October 2014</a>
+                            </li>
+                            <li>
+                                <a href="/2014/05/">May 2014</a>
+                            </li>
+                            <li>
+                                <a href="/2014/03/">March 2014</a>
+                            </li>
+                            <li>
+                                <a href="/2013/09/">September 2013</a>
+                            </li>
+                            <li>
+                                <a href="/2012/07/">July 2012</a>
+                            </li>
+                            <li>
+                                <a href="/2012/04/">April 2012</a>
+                            </li>
+                            <li>
+                                <a href="/2012/01/">January 2012</a>
+                            </li>
+                            <li>
+                                <a href="/2011/11/">November 2011</a>
+                            </li>
+                            <li>
+                                <a href="/2011/06/">June 2011</a>
+                            </li>
+                            <li>
+                                <a href="/2010/08/">August 2010</a>
+                            </li>
+                            <li>
+                                <a href="/2010/05/">May 2010</a>
+                            </li>
+                            <li>
+                                <a href="/2010/02/">February 2010</a>
+                            </li>
+                            <li>
+                                <a href="/2010/01/">January 2010</a>
+                            </li>
+                            <li>
+                                <a href="/2009/12/">December 2009</a>
+                            </li>
+                            <li>
+                                <a href="/2009/10/">October 2009</a>
+                            </li>
+                            <li>
+                                <a href="/2009/02/">February 2009</a>
+                            </li>
+                            <li>
+                                <a href="/2008/07/">July 2008</a>
+                            </li>
+                            <li>
+                                <a href="/2008/03/">March 2008</a>
+                            </li>
+                            <li>
+                                <a href="/2007/04/">April 2007</a>
+                            </li>
+                            <li>
+                                <a href="/2006/06/">June 2006</a>
+                            </li>
+                            <li>
+                                <a href="/2006/04/">April 2006</a>
+                            </li>
+                            <li>
+                                <a href="/2005/03/">March 2005</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <aside class="widget widget_categories" id="categories-2">
+                        <h3 class="widgettitle">
+                            <span>Categories</span>
+                        </h3>
+                        <ul>
+                            <li class="cat-item cat-item-28">
+                                <a href="/category/arcinfo/">ArcInfo</a>
+                            </li>
+                            <li class="cat-item cat-item-18">
+                                <a href="/category/arcmap/">ArcMap</a>
+                            </li>
+                            <li class="cat-item cat-item-35">
+                                <a href="/category/arcpro/">ArcPro</a>
+                            </li>
+                            <li class="cat-item cat-item-30">
+                                <a href="/category/python/arcpy/">arcpy</a>
+                            </li>
+                            <li class="cat-item cat-item-19">
+                                <a href="/category/cartography/">Cartography</a>
+                            </li>
+                            <li class="cat-item cat-item-10">
+                                <a href="/category/data/">Data</a>
+                            </li>
+                            <li class="cat-item cat-item-25">
+                                <a href="/category/gdal-ogr/">Gdal-ogr</a>
+                            </li>
+                            <li class="cat-item cat-item-23">
+                                <a href="/category/geoprocessing/"
+                                    >Geoprocessing</a
+                                >
+                            </li>
+                            <li class="cat-item cat-item-2">
+                                <a href="/category/how-to/">How-to</a>
+                            </li>
+                            <li class="cat-item cat-item-16">
+                                <a href="/category/meta/">Meta</a>
+                            </li>
+                            <li class="cat-item cat-item-32">
+                                <a href="/category/opinion/">Opinion</a>
+                            </li>
+                            <li class="cat-item cat-item-29">
+                                <a href="/category/python/">Python</a>
+                            </li>
+                            <li class="cat-item cat-item-31">
+                                <a href="/category/qgis/">Qgis</a>
+                            </li>
+                            <li class="cat-item cat-item-26">
+                                <a href="/category/scripting/">Scripting</a>
+                            </li>
+                            <li class="cat-item cat-item-20">
+                                <a href="/category/tip/">Tip</a>
+                            </li>
+                            <li class="cat-item cat-item-1">
+                                <a href="/category/uncategorized/"
+                                    >Uncategorized</a
+                                >
+                            </li>
+                            <li class="cat-item cat-item-27">
+                                <a href="/category/v9-x/">v9.x</a>
+                            </li>
+                        </ul>
+                    </aside>
+                    <aside class="widget widget_meta" id="meta-2">
+                        <h3 class="widgettitle">
+                            <span>Meta</span>
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="/feed/">Entries feed</a>
+                            </li>
+                            <li>
+                                <a href="/comments/feed/">Comments feed</a>
+                            </li>
+                            <li>
+                                <a href="https://wordpress.org/"
+                                    >WordPress.org</a
+                                >
+                            </li>
+                        </ul>
+                    </aside>
+                </section>
+            </div>
+            <div id="footer-bg">
+                <div id="footer-wrap">
+                    <footer
+                        class="container clearfix"
+                        id="footer"
+                        role="contentinfo"
+                    >
+                        <span id="footer-text"></span>
+                        <div id="credit-link">
+                            Powered by and
+                            <a
+                                href="https://themezee.com/themes/momentous/"
+                                title="Momentous WordPress Theme"
+                                >Momentous</a
+                            >.
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <!-- end #wrapper -->
+        <script type="speculationrules">
+            {
+                "prefetch": [
+                    {
+                        "source": "document",
+                        "where": {
+                            "and": [
+                                { "href_matches": "\/*" },
+                                {
+                                    "not": {
+                                        "href_matches": [
+                                            "\/wp-*.php",
+                                            "\/wp-admin\/*",
+                                            "\/wp-content\/uploads\/*",
+                                            "\/wp-content\/*",
+                                            "\/wp-content\/plugins\/*",
+                                            "\/wp-content\/themes\/momentous-lite\/*",
+                                            "\/*\\?(.+)"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "not": {
+                                        "selector_matches": "a[rel~=\"nofollow\"]"
+                                    }
+                                },
+                                {
+                                    "not": {
+                                        "selector_matches": ".no-prefetch, .no-prefetch a"
+                                    }
+                                }
+                            ]
+                        },
+                        "eagerness": "conservative"
+                    }
+                ]
+            }
+        </script>
+        <div id="jp-carousel-loading-overlay">
+            <div id="jp-carousel-loading-wrapper">
+                <span id="jp-carousel-library-loading"> </span>
+            </div>
+        </div>
+        <div class="jp-carousel-overlay" style="display: none">
+            <div class="jp-carousel-container">
+                <!-- The Carousel Swiper -->
+                <div
+                    class="jp-carousel-wrap swiper jp-carousel-swiper-container jp-carousel-transitions"
+                    itemscope=""
+                    itemtype="https://schema.org/ImageGallery"
+                >
+                    <div class="jp-carousel swiper-wrapper"></div>
+                    <div class="jp-swiper-button-prev swiper-button-prev">
+                        <svg
+                            fill="none"
+                            height="24"
+                            viewbox="0 0 25 24"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <mask
+                                height="12"
+                                id="maskPrev"
+                                mask-type="alpha"
+                                maskunits="userSpaceOnUse"
+                                width="9"
+                                x="8"
+                                y="6"
+                            >
+                                <path
+                                    d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z"
+                                    fill="white"
+                                ></path>
+                            </mask>
+                            <g mask="url(#maskPrev)">
+                                <rect
+                                    fill="#FFFFFF"
+                                    height="24"
+                                    width="23.8823"
+                                    x="0.579102"
+                                ></rect>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="jp-swiper-button-next swiper-button-next">
+                        <svg
+                            fill="none"
+                            height="24"
+                            viewbox="0 0 25 24"
+                            width="25"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <mask
+                                height="12"
+                                id="maskNext"
+                                mask-type="alpha"
+                                maskunits="userSpaceOnUse"
+                                width="8"
+                                x="8"
+                                y="6"
+                            >
+                                <path
+                                    d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z"
+                                    fill="white"
+                                ></path>
+                            </mask>
+                            <g mask="url(#maskNext)">
+                                <rect
+                                    fill="#FFFFFF"
+                                    height="24"
+                                    width="23.8822"
+                                    x="0.34375"
+                                ></rect>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <!-- The main close buton -->
+                <div class="jp-carousel-close-hint">
+                    <svg
+                        fill="none"
+                        height="24"
+                        viewbox="0 0 25 24"
+                        width="25"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <mask
+                            height="14"
+                            id="maskClose"
+                            mask-type="alpha"
+                            maskunits="userSpaceOnUse"
+                            width="15"
+                            x="5"
+                            y="5"
+                        >
+                            <path
+                                d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z"
+                                fill="white"
+                            ></path>
+                        </mask>
+                        <g mask="url(#maskClose)">
+                            <rect
+                                fill="#FFFFFF"
+                                height="24"
+                                width="23.8823"
+                                x="0.409668"
+                            ></rect>
+                        </g>
+                    </svg>
+                </div>
+                <!-- Image info, comments and meta -->
+                <div class="jp-carousel-info">
+                    <div class="jp-carousel-info-footer">
+                        <div class="jp-carousel-pagination-container">
+                            <div
+                                class="jp-swiper-pagination swiper-pagination"
+                            ></div>
+                            <div class="jp-carousel-pagination"></div>
+                        </div>
+                        <div class="jp-carousel-photo-title-container">
+                            <h2 class="jp-carousel-photo-caption"></h2>
+                        </div>
+                        <div class="jp-carousel-photo-icons-container">
+                            <a
+                                aria-label="Toggle photo metadata visibility"
+                                class="jp-carousel-icon-btn jp-carousel-icon-info"
+                                href="#"
+                                ><span class="jp-carousel-icon"
+                                    ><svg
+                                        fill="none"
+                                        height="24"
+                                        viewbox="0 0 25 24"
+                                        width="25"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <mask
+                                            height="20"
+                                            id="maskInfo"
+                                            mask-type="alpha"
+                                            maskunits="userSpaceOnUse"
+                                            width="21"
+                                            x="2"
+                                            y="2"
+                                        >
+                                            <path
+                                                clip-rule="evenodd"
+                                                d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z"
+                                                fill="white"
+                                                fill-rule="evenodd"
+                                            ></path>
+                                        </mask>
+                                        <g mask="url(#maskInfo)">
+                                            <rect
+                                                fill="#FFFFFF"
+                                                height="24"
+                                                width="23.8823"
+                                                x="0.8125"
+                                            ></rect>
+                                        </g></svg></span
+                            ></a>
+                            <a
+                                aria-label="Toggle photo comments visibility"
+                                class="jp-carousel-icon-btn jp-carousel-icon-comments"
+                                href="#"
+                                ><span class="jp-carousel-icon"
+                                    ><svg
+                                        fill="none"
+                                        height="24"
+                                        viewbox="0 0 25 24"
+                                        width="25"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <mask
+                                            height="20"
+                                            id="maskComments"
+                                            mask-type="alpha"
+                                            maskunits="userSpaceOnUse"
+                                            width="21"
+                                            x="2"
+                                            y="2"
+                                        >
+                                            <path
+                                                clip-rule="evenodd"
+                                                d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z"
+                                                fill="white"
+                                                fill-rule="evenodd"
+                                            ></path>
+                                        </mask>
+                                        <g mask="url(#maskComments)">
+                                            <rect
+                                                fill="#FFFFFF"
+                                                height="24"
+                                                width="23.8823"
+                                                x="0.34668"
+                                            ></rect>
+                                        </g>
+                                    </svg> </span
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="jp-carousel-info-extra">
+                        <div class="jp-carousel-info-content-wrapper">
+                            <div class="jp-carousel-photo-title-container">
+                                <h2 class="jp-carousel-photo-title"></h2>
+                            </div>
+                            <div class="jp-carousel-comments-wrapper">
+                                <div id="jp-carousel-comments-loading">
+                                    <span>Loading Comments...</span>
+                                </div>
+                                <div class="jp-carousel-comments"></div>
+                                <div id="jp-carousel-comment-form-container">
+                                    <span id="jp-carousel-comment-form-spinner"
+                                        > </span
+                                    >
+                                    <div
+                                        id="jp-carousel-comment-post-results"
+                                    ></div>
+                                    <form
+                                        id="jp-carousel-comment-form"
+                                        name="jp-carousel-comment-form"
+                                    >
+                                        <label
+                                            class="screen-reader-text"
+                                            for="jp-carousel-comment-form-comment-field"
+                                            >Write a Comment...</label
+                                        >
+                                        <textarea
+                                            class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea"
+                                            id="jp-carousel-comment-form-comment-field"
+                                            name="comment"
+                                            placeholder="Write a Comment..."
+                                        ></textarea>
+                                        <div
+                                            id="jp-carousel-comment-form-submit-and-info-wrapper"
+                                        >
+                                            <div
+                                                id="jp-carousel-comment-form-commenting-as"
+                                            >
+                                                <fieldset>
+                                                    <label
+                                                        for="jp-carousel-comment-form-email-field"
+                                                        >Email (Required)</label
+                                                    >
+                                                    <input
+                                                        class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field"
+                                                        id="jp-carousel-comment-form-email-field"
+                                                        name="email"
+                                                        type="text"
+                                                    />
+                                                </fieldset>
+                                                <fieldset>
+                                                    <label
+                                                        for="jp-carousel-comment-form-author-field"
+                                                        >Name (Required)</label
+                                                    >
+                                                    <input
+                                                        class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field"
+                                                        id="jp-carousel-comment-form-author-field"
+                                                        name="author"
+                                                        type="text"
+                                                    />
+                                                </fieldset>
+                                                <fieldset>
+                                                    <label
+                                                        for="jp-carousel-comment-form-url-field"
+                                                        >Website</label
+                                                    >
+                                                    <input
+                                                        class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field"
+                                                        id="jp-carousel-comment-form-url-field"
+                                                        name="url"
+                                                        type="text"
+                                                    />
+                                                </fieldset>
+                                            </div>
+                                            <input
+                                                class="jp-carousel-comment-form-button"
+                                                id="jp-carousel-comment-form-button-submit"
+                                                name="submit"
+                                                type="submit"
+                                                value="Post Comment"
+                                            />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="jp-carousel-image-meta">
+                                <div class="jp-carousel-title-and-caption">
+                                    <div class="jp-carousel-photo-info">
+                                        <h3
+                                            class="jp-carousel-caption"
+                                            itemprop="caption description"
+                                        ></h3>
+                                    </div>
+                                    <div
+                                        class="jp-carousel-photo-description"
+                                    ></div>
+                                </div>
+                                <ul
+                                    class="jp-carousel-image-exif"
+                                    style="display: none"
+                                ></ul>
+                                <a
+                                    class="jp-carousel-image-download"
+                                    href="#"
+                                    style="display: none"
+                                    target="_blank"
+                                    ><svg
+                                        fill="none"
+                                        height="24"
+                                        viewbox="0 0 25 24"
+                                        width="25"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <mask
+                                            height="18"
+                                            id="mask0"
+                                            mask-type="alpha"
+                                            maskunits="userSpaceOnUse"
+                                            width="19"
+                                            x="3"
+                                            y="3"
+                                        >
+                                            <path
+                                                clip-rule="evenodd"
+                                                d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z"
+                                                fill="white"
+                                                fill-rule="evenodd"
+                                            ></path>
+                                        </mask>
+                                        <g mask="url(#mask0)">
+                                            <rect
+                                                fill="#FFFFFF"
+                                                height="24"
+                                                width="23.8823"
+                                                x="0.870605"
+                                            ></rect>
+                                        </g></svg
+                                ></a>
+                                <div
+                                    class="jp-carousel-image-map"
+                                    style="display: none"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <link
+            href="https://c0.wp.com/p/jetpack/14.9.1/_inc/blocks/swiper.css"
+            id="jetpack-swiper-library-css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://c0.wp.com/p/jetpack/14.9.1/modules/carousel/jetpack-carousel.css"
+            id="jetpack-carousel-css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script id="jetpack-stats-js-before" type="text/javascript">
+            /* <![CDATA[ */
+            _stq = window._stq || [];
+            _stq.push([
+                "view",
+                JSON.parse(
+                    '{"v":"ext","blog":"128167691","post":"0","tz":"-7","srv":"www.yukongis.ca","arch_home":"1","j":"1:14.9.1"}',
+                ),
+            ]);
+            _stq.push(["clickTrackerInit", "128167691", "0"]);
+            /* ]]> */
+        </script>
+        <script id="jetpack-carousel-js-extra" type="text/javascript">
+            /* <![CDATA[ */
+            var jetpackSwiperLibraryPath = {
+                url: "\/wp-content\/plugins\/jetpack\/_inc\/blocks\/swiper.js",
+            };
+            var jetpackCarouselStrings = {
+                widths: [370, 700, 1000, 1200, 1400, 2000],
+                is_logged_in: "",
+                lang: "en",
+                ajaxurl: "\/wp-admin\/admin-ajax.php",
+                nonce: "4885f63184",
+                display_exif: "1",
+                display_comments: "1",
+                single_image_gallery: "1",
+                single_image_gallery_media_file: "",
+                background_color: "black",
+                comment: "Comment",
+                post_comment: "Post Comment",
+                write_comment: "Write a Comment...",
+                loading_comments: "Loading Comments...",
+                image_label: "Open image in full-screen.",
+                download_original:
+                    'View full size <span class="photo-size">{0}<span class="photo-size-times">\u00d7<\/span>{1}<\/span>',
+                no_comment_text:
+                    "Please be sure to submit some text with your comment.",
+                no_comment_email: "Please provide an email address to comment.",
+                no_comment_author: "Please provide your name to comment.",
+                comment_post_error:
+                    "Sorry, but there was an error posting your comment. Please try again later.",
+                comment_approved: "Your comment was approved.",
+                comment_unapproved: "Your comment is in moderation.",
+                camera: "Camera",
+                aperture: "Aperture",
+                shutter_speed: "Shutter Speed",
+                focal_length: "Focal Length",
+                copyright: "Copyright",
+                comment_registration: "0",
+                require_name_email: "1",
+                login_url:
+                    "\/wp-login.php?redirect_to=%2F2021%2F11%2F19%2Fgo-to-juneau-in-3d-in-a-browser%2F",
+                blog_id: "1",
+                meta_data: [
+                    "camera",
+                    "aperture",
+                    "shutter_speed",
+                    "focal_length",
+                    "copyright",
+                ],
+            };
+            /* ]]> */
+        </script>
+        <!-- Dynamic page generated in 0.586 seconds. --><!-- Cached page generated by WP-Super-Cache on 2025-09-02 01:18:09 -->
+    </body>
 </html>
