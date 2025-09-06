@@ -39,13 +39,15 @@ console = Console()
 def move_sidebar_after_content(html_content: str) -> str:
     """
     Parse HTML and move sidebar section to immediately follow content section.
-    Also removes aside tags with duplicate IDs and specific unwanted asides within the sidebar section.
+    Also removes aside tags with duplicate IDs and specific unwanted asides within the sidebar section,
+    removes script elements with jetpack-*, sharing-js*, comment-reply* IDs and speculationrules type,
+    removes iframe with likes-master ID, and removes divs with sharedaddy* classes.
 
     Args:
         html_content: Raw HTML content as string
 
     Returns:
-        Modified HTML content with sidebar moved after content, duplicate ID asides removed, and specific asides removed
+        Modified HTML content with sidebar moved after content, duplicate ID asides removed, specific asides removed, unwanted scripts/iframes/divs removed
 
     Raises:
         ValueError: If required sections are not found
@@ -61,6 +63,45 @@ def move_sidebar_after_content(html_content: str) -> str:
 
     if not sidebar_section:
         raise ValueError("Section with id 'sidebar' not found in HTML")
+
+    # Remove unwanted script elements from entire document
+    unwanted_scripts = []
+
+    # Find jetpack-* scripts
+    jetpack_scripts = soup.find_all('script', id=lambda x: x and x.startswith('jetpack-'))
+    unwanted_scripts.extend(jetpack_scripts)
+
+    # Find sharing-js* scripts
+    sharing_scripts = soup.find_all('script', id=lambda x: x and x.startswith('sharing-js'))
+    unwanted_scripts.extend(sharing_scripts)
+
+    # Find comment-reply* scripts
+    comment_scripts = soup.find_all('script', id=lambda x: x and x.startswith('comment-reply'))
+    unwanted_scripts.extend(comment_scripts)
+
+    # Find speculationrules scripts
+    speculation_scripts = soup.find_all('script', type='speculationrules')
+    unwanted_scripts.extend(speculation_scripts)
+
+    scripts_removed = len(unwanted_scripts)
+    for script in unwanted_scripts:
+        script.decompose()
+
+    # Remove iframe with likes-master ID
+    likes_iframe = soup.find('iframe', id='likes-master')
+    iframe_removed = 1 if likes_iframe else 0
+    if likes_iframe:
+        likes_iframe.decompose()
+
+    # Remove divs with sharedaddy* classes
+    sharedaddy_divs = soup.find_all('div', class_=lambda x: x and any(cls.startswith('sharedaddy') for cls in x if isinstance(x, list)))
+    if not sharedaddy_divs:
+        # Also check for single class strings
+        sharedaddy_divs = soup.find_all('div', class_=lambda x: isinstance(x, str) and x.startswith('sharedaddy'))
+
+    divs_removed = len(sharedaddy_divs)
+    for div in sharedaddy_divs:
+        div.decompose()
 
     # Remove specific unwanted aside tags and duplicate IDs within sidebar
     unwanted_ids = {'search-2', 'meta-2'}
@@ -109,12 +150,37 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
     try:
         html_content = file_path.read_text(encoding='utf-8')
 
-        # Check for duplicate aside IDs and unwanted asides in sidebar before processing
+        # Check for duplicate aside IDs, unwanted asides in sidebar, and jetpack scripts before processing
         soup_check = BeautifulSoup(html_content, 'lxml')
         sidebar_check = soup_check.find(id='sidebar')
         duplicate_count = 0
         unwanted_count = 0
+        scripts_count = 0
+        iframe_count = 0
+        divs_count = 0
         unwanted_ids = {'search-2', 'meta-2'}
+
+        # Count unwanted scripts
+        unwanted_scripts_check = []
+        jetpack_scripts = soup_check.find_all('script', id=lambda x: x and x.startswith('jetpack-'))
+        unwanted_scripts_check.extend(jetpack_scripts)
+        sharing_scripts = soup_check.find_all('script', id=lambda x: x and x.startswith('sharing-js'))
+        unwanted_scripts_check.extend(sharing_scripts)
+        comment_scripts = soup_check.find_all('script', id=lambda x: x and x.startswith('comment-reply'))
+        unwanted_scripts_check.extend(comment_scripts)
+        speculation_scripts = soup_check.find_all('script', type='speculationrules')
+        unwanted_scripts_check.extend(speculation_scripts)
+        scripts_count = len(unwanted_scripts_check)
+
+        # Count iframe
+        likes_iframe = soup_check.find('iframe', id='likes-master')
+        iframe_count = 1 if likes_iframe else 0
+
+        # Count sharedaddy divs
+        sharedaddy_divs = soup_check.find_all('div', class_=lambda x: x and any(cls.startswith('sharedaddy') for cls in x if isinstance(x, list)))
+        if not sharedaddy_divs:
+            sharedaddy_divs = soup_check.find_all('div', class_=lambda x: isinstance(x, str) and x.startswith('sharedaddy'))
+        divs_count = len(sharedaddy_divs)
 
         if sidebar_check:
             aside_tags = sidebar_check.find_all('aside', id=True)
@@ -136,6 +202,12 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
                 messages.append(f"would remove {unwanted_count} unwanted asides")
             if duplicate_count > 0:
                 messages.append(f"would remove {duplicate_count} duplicate aside IDs")
+            if scripts_count > 0:
+                messages.append(f"would remove {scripts_count} unwanted scripts")
+            if iframe_count > 0:
+                messages.append(f"would remove {iframe_count} likes iframe")
+            if divs_count > 0:
+                messages.append(f"would remove {divs_count} sharedaddy divs")
             detail_msg = f" ({', '.join(messages)})" if messages else ""
             return True, f"Would modify file{detail_msg} (dry-run)"
 
@@ -152,6 +224,12 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
             messages.append(f"removed {unwanted_count} unwanted asides")
         if duplicate_count > 0:
             messages.append(f"removed {duplicate_count} duplicate aside IDs")
+        if scripts_count > 0:
+            messages.append(f"removed {scripts_count} unwanted scripts")
+        if iframe_count > 0:
+            messages.append(f"removed {iframe_count} likes iframe")
+        if divs_count > 0:
+            messages.append(f"removed {divs_count} sharedaddy divs")
         detail_msg = f", {', '.join(messages)}" if messages else ""
         return True, f"Successfully modified{backup_msg}{detail_msg}"
 

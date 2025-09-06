@@ -453,7 +453,6 @@
 </div>
 </div>
 </section><section class="secondary clearfix" id="sidebar" role="complementary">
-
 <aside class="widget widget_recent_entries" id="recent-posts-2">
 <h3 class="widgettitle">
 <span>Recent Posts</span>
@@ -699,9 +698,7 @@
 </li>
 </ul>
 </aside>
-
 </section>
-
 </div>
 </div>
 <div id="comments"></div>
@@ -717,194 +714,15 @@
 </div>
 </div>
 <!-- end #wrapper -->
-<script type="speculationrules">
-            {
-                "prefetch": [
-                    {
-                        "source": "document",
-                        "where": {
-                            "and": [
-                                { "href_matches": "\/*" },
-                                {
-                                    "not": {
-                                        "href_matches": [
-                                            "\/wp-*.php",
-                                            "\/wp-admin\/*",
-                                            "\/wp-content\/uploads\/*",
-                                            "\/wp-content\/*",
-                                            "\/wp-content\/plugins\/*",
-                                            "\/wp-content\/themes\/momentous-lite\/*",
-                                            "\/*\\?(.+)"
-                                        ]
-                                    }
-                                },
-                                {
-                                    "not": {
-                                        "selector_matches": "a[rel~=\"nofollow\"]"
-                                    }
-                                },
-                                {
-                                    "not": {
-                                        "selector_matches": ".no-prefetch, .no-prefetch a"
-                                    }
-                                }
-                            ]
-                        },
-                        "eagerness": "conservative"
-                    }
-                ]
-            }
-        </script>
+
 <script type="text/javascript">
             window.WPCOM_sharing_counts = {
                 "\/2020\/11\/12\/yukon-nts-index\/": 507,
             };
         </script>
-<script id="jetpack-stats-js-before" type="text/javascript">
-            /* <![CDATA[ */
-            _stq = window._stq || [];
-            _stq.push([
-                "view",
-                JSON.parse(
-                    '{"v":"ext","blog":"128167691","post":"152","tz":"-7","srv":"www.yukongis.ca","j":"1:14.9.1"}',
-                ),
-            ]);
-            _stq.push(["clickTrackerInit", "128167691", "152"]);
-            /* ]]> */
-        </script>
-<script id="sharing-js-js-extra" type="text/javascript">
-            /* <![CDATA[ */
-            var sharing_js_options = {
-                lang: "en",
-                counts: "1",
-                is_stats_active: "1",
-            };
-            /* ]]> */
-        </script>
-<script id="sharing-js-js-after" type="text/javascript">
-            /* <![CDATA[ */
-            var windowOpen;
-            (function () {
-                function matches(el, sel) {
-                    return !!(
-                        (el.matches && el.matches(sel)) ||
-                        (el.msMatchesSelector && el.msMatchesSelector(sel))
-                    );
-                }
 
-                document.body.addEventListener("click", function (event) {
-                    if (!event.target) {
-                        return;
-                    }
 
-                    var el;
-                    if (matches(event.target, "a.share-twitter")) {
-                        el = event.target;
-                    } else if (
-                        event.target.parentNode &&
-                        matches(event.target.parentNode, "a.share-twitter")
-                    ) {
-                        el = event.target.parentNode;
-                    }
 
-                    if (el) {
-                        event.preventDefault();
-
-                        // If there's another sharing window open, close it.
-                        if (typeof windowOpen !== "undefined") {
-                            windowOpen.close();
-                        }
-                        windowOpen = window.open(
-                            el.getAttribute("href"),
-                            "wpcomtwitter",
-                            "menubar=1,resizable=1,width=600,height=350",
-                        );
-                        return false;
-                    }
-                });
-            })();
-            var windowOpen;
-            (function () {
-                function matches(el, sel) {
-                    return !!(
-                        (el.matches && el.matches(sel)) ||
-                        (el.msMatchesSelector && el.msMatchesSelector(sel))
-                    );
-                }
-
-                document.body.addEventListener("click", function (event) {
-                    if (!event.target) {
-                        return;
-                    }
-
-                    var el;
-                    if (matches(event.target, "a.share-facebook")) {
-                        el = event.target;
-                    } else if (
-                        event.target.parentNode &&
-                        matches(event.target.parentNode, "a.share-facebook")
-                    ) {
-                        el = event.target.parentNode;
-                    }
-
-                    if (el) {
-                        event.preventDefault();
-
-                        // If there's another sharing window open, close it.
-                        if (typeof windowOpen !== "undefined") {
-                            windowOpen.close();
-                        }
-                        windowOpen = window.open(
-                            el.getAttribute("href"),
-                            "wpcomfacebook",
-                            "menubar=1,resizable=1,width=600,height=400",
-                        );
-                        return false;
-                    }
-                });
-            })();
-            var windowOpen;
-            (function () {
-                function matches(el, sel) {
-                    return !!(
-                        (el.matches && el.matches(sel)) ||
-                        (el.msMatchesSelector && el.msMatchesSelector(sel))
-                    );
-                }
-
-                document.body.addEventListener("click", function (event) {
-                    if (!event.target) {
-                        return;
-                    }
-
-                    var el;
-                    if (matches(event.target, "a.share-linkedin")) {
-                        el = event.target;
-                    } else if (
-                        event.target.parentNode &&
-                        matches(event.target.parentNode, "a.share-linkedin")
-                    ) {
-                        el = event.target.parentNode;
-                    }
-
-                    if (el) {
-                        event.preventDefault();
-
-                        // If there's another sharing window open, close it.
-                        if (typeof windowOpen !== "undefined") {
-                            windowOpen.close();
-                        }
-                        windowOpen = window.open(
-                            el.getAttribute("href"),
-                            "wpcomlinkedin",
-                            "menubar=1,resizable=1,width=580,height=450",
-                        );
-                        return false;
-                    }
-                });
-            })();
-            /* ]]> */
-        </script>
 <!-- Dynamic page generated in 0.595 seconds. --><!-- Cached page generated by WP-Super-Cache on 2025-09-02 01:20:23 -->
 </body>
 </html>
