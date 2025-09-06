@@ -39,12 +39,13 @@ console = Console()
 def move_sidebar_after_content(html_content: str) -> str:
     """
     Parse HTML and move sidebar section to immediately follow content section.
+    Also removes duplicate 'aside' tags within the sidebar section.
 
     Args:
         html_content: Raw HTML content as string
 
     Returns:
-        Modified HTML content with sidebar moved after content
+        Modified HTML content with sidebar moved after content and duplicates removed
 
     Raises:
         ValueError: If required sections are not found
@@ -60,6 +61,18 @@ def move_sidebar_after_content(html_content: str) -> str:
 
     if not sidebar_section:
         raise ValueError("Section with id 'sidebar' not found in HTML")
+
+    # Remove duplicate aside tags within sidebar
+    aside_tags = sidebar_section.find_all('aside')
+    if len(aside_tags) > 1:
+        # Keep the first aside tag and merge content from duplicates
+        first_aside = aside_tags[0]
+        for duplicate_aside in aside_tags[1:]:
+            # Move all children from duplicate to first aside
+            for child in list(duplicate_aside.children):
+                first_aside.append(child)
+            # Remove the duplicate aside tag
+            duplicate_aside.decompose()
 
     # Remove sidebar from its current position
     sidebar_section.extract()
@@ -87,10 +100,20 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
     """
     try:
         html_content = file_path.read_text(encoding='utf-8')
+
+        # Check for duplicate aside tags in sidebar before processing
+        soup_check = BeautifulSoup(html_content, 'lxml')
+        sidebar_check = soup_check.find(id='sidebar')
+        duplicate_count = 0
+        if sidebar_check:
+            aside_tags = sidebar_check.find_all('aside')
+            duplicate_count = len(aside_tags) - 1 if len(aside_tags) > 1 else 0
+
         modified_html = move_sidebar_after_content(html_content)
 
         if dry_run:
-            return True, "Would modify file (dry-run)"
+            duplicate_msg = f" (would remove {duplicate_count} duplicate aside tags)" if duplicate_count > 0 else ""
+            return True, f"Would modify file{duplicate_msg} (dry-run)"
 
         # Create backup if requested
         if backup:
@@ -100,7 +123,8 @@ def process_single_file(file_path: Path, backup: bool = False, dry_run: bool = T
         # Write modified content
         file_path.write_text(modified_html, encoding='utf-8')
         backup_msg = " (backup created)" if backup else ""
-        return True, f"Successfully modified{backup_msg}"
+        duplicate_msg = f", removed {duplicate_count} duplicate aside tags" if duplicate_count > 0 else ""
+        return True, f"Successfully modified{backup_msg}{duplicate_msg}"
 
     except ValueError as e:
         return False, f"Skip: {e}"
